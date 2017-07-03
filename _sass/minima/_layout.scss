@@ -209,16 +209,16 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+}
 
-  .tag {
-    color: $grey-color;
-    font-size: .85em;
-    text-transform: uppercase;
-    padding: 2px 5px;
-    border: solid 1px $grey-color;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
+.tag {
+  color: $grey-color;
+  font-size: .85em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: solid 1px $grey-color;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .post-title {

@@ -16,14 +16,18 @@ layout: default
       {% if page.author %}
         by <strong><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span></strong>
       {% endif %}
-      {% for item in page.tags %}
-        <a href="/tag/{{ item }}"><span class="tag">{{ item }}</span></a>
-      {% endfor %}
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+  <footer class="post-footer">
+    <p class="post-meta">
+      {% for item in page.tags %}
+        <a href="/tag/{{ item }}"><span class="tag">{{ item }}</span></a>
+      {% endfor %}
+    </p>
+  </footer>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
