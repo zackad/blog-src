@@ -10,7 +10,7 @@ layout: default
         {% if page.date_modified %}
           Last updated: <strong>{{ page.date_modified | date: date_format }}</strong>
         {% else %}
-          Written on: <strong>{{ page.date_modified | date: date_format }}</strong>
+          Written on: <strong>{{ page.date | date: date_format }}</strong>
         {% endif %}
       </time>
       {% if page.author %}
