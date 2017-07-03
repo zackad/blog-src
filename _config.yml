@@ -29,6 +29,24 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# jekyll archives plugin
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+  layouts:
+    year: archive-year
+    month: archive-month
+    tag: archive-tags
+  permalink:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
