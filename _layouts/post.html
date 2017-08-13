@@ -24,7 +24,7 @@ layout: default
   <footer class="post-footer">
     <p class="post-meta">
       {% for item in page.tags %}
-        <a href="/tag/{{ item }}"><span class="tag">{{ item }}</span></a>
+        <a href="{{ site.baseurl }}/tag/{{ item }}"><span class="tag">{{ item }}</span></a>
       {% endfor %}
     </p>
   </footer>
