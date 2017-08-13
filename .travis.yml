@@ -13,4 +13,4 @@ script:
  - jekyll build
  - bundle exec jekyll build
 
-sudo: false
+sudo: required
