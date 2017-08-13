@@ -6,6 +6,7 @@ rvm:
   - 2.3.3
 
 install:
+  - apt-get install build-essential
   - gem install jekyll
 
 script:
