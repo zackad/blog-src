@@ -1,7 +1,9 @@
 language: ruby
 
 rvm:
+  - 2.3
   - 2.3.3
+  - "stable"
 
 install:
   - gem install jekyll
