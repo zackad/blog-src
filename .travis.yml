@@ -6,8 +6,10 @@ language: ruby
 #   - 2.3.3
 
 install:
-  - sudo apt-get install build-essential
+  # - sudo apt-get install build-essential
   - gem install jekyll
+
+exclude: [vendor]
 
 script:
  - jekyll build
