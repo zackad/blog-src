@@ -11,11 +11,12 @@ before_install:
 script:
  - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
 
+before_deploy:
+  - sudo chown -R travis:travis /home/travis/
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
   local_dir: _site
   name: DeployBot
-  on:
-    branch: master
