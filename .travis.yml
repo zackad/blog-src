@@ -1,3 +1,5 @@
+sudo: required
+
 language: ruby
 
 # rvm:
@@ -5,14 +7,11 @@ language: ruby
 #   - 2.3.1
 #   - 2.3.3
 
-install:
-  # - sudo apt-get install build-essential
-  - gem install jekyll
+services:
+  - docker
 
-exclude: [vendor]
+before_install:
+  - docker pull jekyll/jekyll
 
 script:
- - jekyll build
- - bundle exec jekyll build
-
-sudo: required
+ - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
