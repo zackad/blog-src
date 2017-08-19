@@ -9,7 +9,7 @@ before_install:
   - docker pull jekyll/jekyll
 
 script:
- - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
+  - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
 
 before_deploy:
   - sudo chown -R travis:travis /home/travis/
@@ -17,6 +17,7 @@ before_deploy:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $github_token
+  github_token:
+    secure: sHdUzsLB9y7sT+wEcsony4MiXQMV/cSA2+7/gMkCstVidPHHxOOZ53cw+5hDOosOx6HoaW0Tz12HVU+YqeFUFHtLBfaXcUa4LH9pS5oqYbC+V5jH6vdYxiRxyWf1GHu8VWf06QIyCw1/gQyzVM+yAKqHvB4hITloWOU87z4rIR/1Z6n6svKXhpAMnRsomPLBPEsk6KxuI0oqL5WTdwq2u6krooprhR3B7kdG2v2X7VUvAlxvHRUVd+HsQQdBjZQE6UXyw9Y114eMjgZUur3+bGF025elDCdv2pQ7SDXZTg1TnvruKvJYkowDKr0KZB52It0jX1GTHzwgkS4e1M3wmt8mgg4/HCgsF+ZZPoc+zQ3SdBgYdXewRIIeWjyLehswacHmACV/FLJ5rQjA0/dyd5Yy61XzwFM8k9HpMsN+68ex14dNc6Pcyb4EF9O4RLgPSf0d0mxdUzD32dGLxhdRzYD8fKDiZ3Avtg6n0N4dIvx7GYRjtoNbp7ihUL6QIpYOQFh1iFkWyqEN8Aj95K66jILIr+N3GRCOkTx8XOscP4LZjCA5OdUW8DLfSZ8SqEzvwLOkjGj8nyjvw/knMJ4jzwZIoVwuuFccV7zRAkU35gEnrQSh6jcoKxTVsphCTUhcrnwh+2Au2LQRVx3vGPsb38a3VtXiV8ZztkKRppuf/9g=
   local_dir: _site
   name: DeployBot
