@@ -1,13 +1,21 @@
+sudo: required
+
 language: ruby
 
-rvm:
-  - 2.2
-  - 2.3.1
-  - 2.3.3
+services:
+  - docker
 
-install:
-  - gem install jekyll
+before_install:
+  - docker pull jekyll/jekyll
 
-script: jekyll build
+script:
+ - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
 
-sudo: false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: _site
+  name: DeployBot
+  on:
+    branch: master
