@@ -39,6 +39,8 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+sass:
+  style: compressed
 
 # jekyll archives plugin
 jekyll-archives:
