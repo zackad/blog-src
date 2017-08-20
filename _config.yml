@@ -19,16 +19,16 @@ email: zackad.dev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   I'm a simple man. I do what I want and what I could. Otherwise
   it's a trial and error.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  zackad
+github_username: zackad
 disqus:
   shortname: zackadtech
 
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
+plugins_dir:
   - jekyll-feed
   - jekyll-archives
   - jekyll-tidy
