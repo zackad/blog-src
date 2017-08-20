@@ -26,6 +26,7 @@ disqus:
   shortname: zackadtech
 
 # Build settings
+future: true
 markdown: kramdown
 theme: minima
 plugins_dir:
@@ -35,6 +36,7 @@ plugins_dir:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - LICENSE
 
 # jekyll archives plugin
 jekyll-archives:
