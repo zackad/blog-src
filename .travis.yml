@@ -10,7 +10,7 @@ before_install:
   - docker pull jekyll/jekyll
 
 script:
-  - docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
+  - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
 
 before_deploy:
   - sudo chown -R travis:travis /home/travis/
