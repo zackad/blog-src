@@ -1,7 +1,7 @@
 ---
 layout: post
 author: zackad
-categories: en
+category: en
 tags: linux security
 ---
 The purpose of this configuration is to disable ssh login using password and force user to use `ssh-key` pair instead.
