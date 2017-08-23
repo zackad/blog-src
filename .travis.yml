@@ -9,6 +9,8 @@ before_install:
   - export TZ=Asia/Jakarta
   - docker pull jekyll/jekyll
 
+install: true
+
 script:
   - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
 
