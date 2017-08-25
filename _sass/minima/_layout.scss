@@ -227,7 +227,7 @@
   line-height: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1.5);
   }
 }
 
