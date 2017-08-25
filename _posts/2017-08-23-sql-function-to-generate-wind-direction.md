@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SQL Function to Generate Wind Direction
+tags: sql
 ---
 Based on [Robert Sharp][so-answer] answer on [stack overflow question][so-question], this function is tested on MySQL version 5.7.
 
@@ -60,8 +61,6 @@ mysql> select get_wind_direction(32.54);
 | NNE                       |
 +---------------------------+
 1 row in set (0,00 sec)
-
-
 ```
 
 [so-answer]: https://stackoverflow.com/a/39277268/6265296
