@@ -29,9 +29,15 @@ disqus:
 google_analytics: UA-105186998-1
 
 # Build settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      category: "en"
 future: true
 markdown: kramdown
-theme: minima
 plugins_dir:
   - jekyll-feed
   - jekyll-archives
