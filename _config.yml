@@ -36,6 +36,7 @@ defaults:
       type: "posts"
     values:
       category: "en"
+      author: "zackad"
 future: true
 markdown: kramdown
 plugins_dir:
