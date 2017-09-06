@@ -24,7 +24,6 @@ module Jekyll
         end
 
         def render(context)
-            # "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}\" frameborder=\"0\"allowfullscreen></iframe>"
             "<div class=\"youtube-container\"><iframe src=\"https://www.youtube.com/embed/#{@id}\" class=\"youtube-embed\" frameborder=\"0\" allowfullscreen></iframe></div>"
         end
     end
@@ -35,7 +34,6 @@ module Jekyll
     module YoutubeRender
         def youtube(input)
             "<div class=\"youtube-container\"><iframe src=\"https://www.youtube.com/embed/#{input}\" class=\"youtube-embed\" frameborder=\"0\" allowfullscreen></iframe></div>"
-            # "https://youtube.com/embed/#{input}"
         end
     end
 end
