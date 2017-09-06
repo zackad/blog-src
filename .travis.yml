@@ -12,7 +12,8 @@ before_install:
 install: true
 
 script:
-  - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll jekyll build
+  - >
+    docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll@sha256:74b0faebb8faaa58673cc73b5e9d6c8b87d7f558a41d582c106ed97afdf2f17d jekyll build
 
 before_deploy:
   - sudo chown -R travis:travis /home/travis/
@@ -25,4 +26,14 @@ deploy:
   target_branch: master
   name: DeployBot
   github_token:
-    secure: Cg9MV/aerNi1gdGmqfVoTk4N3an0uQKT1aqkNzQjOIqrNc/1IDALlGXnwR+FQuepSa5HmRLz/pveKe7uOJ2OktnI83K2jMqSrRplRCyAGqGCVEreKI7nAwrXmUl3ovVJrwdfBjUjpWOYtoQHZ3qu08ywsnysBSrH+a4kgrmQE/MV0sPoY+uaD9RcUKllVVLj0P76Ld4NlL8zklK2zPX6uKXvQ1zs1s7jhRSY6250ujrSsoHaePn75TmFYluxLkg7BPaoz4IcF2k+LXDgS/vr7+d/5E7Ifk81d8j2KXZ9vvlT9Gg0JjqIZYcKN+wTNbcGlk23TPEuRiMiu4gqMdRBtE/MfUPLNDwb7RWxLxZBUf+pnCFNVhA10qsrsRbIa1xVA4DzUy2Ztc/IDLYueKcJ1KKz9RziJkbfU6lvUBU2v+w19S5slk8SZqKIP9Mpzpwv/l6dsSWxoHqhym/h2gcMYoZo8p/aLIgaDVC+Vmfv0H99lJDC6PXMYiXEc/kW0AbOr2gt9LeeGqv3GtfeKUMRZgdXUm49U0pdZykRjo0v6UXgjocewsnYa7YJcXpRlYSNB0BDJ3rdaRowfh740e9qS9x6cGEs3j7dfnUHiP5U4NGU6X6fc7lsKm3IaqH4Xtr+aSwmtaLhmo56LRdz4l73de4d/scheris11J6LqM1lZc=
+    secure: >
+      Cg9MV/aerNi1gdGmqfVoTk4N3an0uQKT1aqkNzQjOIqrNc/1IDALlGXnwR+FQuepSa5HmRLz/p
+      veKe7uOJ2OktnI83K2jMqSrRplRCyAGqGCVEreKI7nAwrXmUl3ovVJrwdfBjUjpWOYtoQHZ3qu
+      08ywsnysBSrH+a4kgrmQE/MV0sPoY+uaD9RcUKllVVLj0P76Ld4NlL8zklK2zPX6uKXvQ1zs1s
+      7jhRSY6250ujrSsoHaePn75TmFYluxLkg7BPaoz4IcF2k+LXDgS/vr7+d/5E7Ifk81d8j2KXZ9
+      vvlT9Gg0JjqIZYcKN+wTNbcGlk23TPEuRiMiu4gqMdRBtE/MfUPLNDwb7RWxLxZBUf+pnCFNVh
+      A10qsrsRbIa1xVA4DzUy2Ztc/IDLYueKcJ1KKz9RziJkbfU6lvUBU2v+w19S5slk8SZqKIP9Mp
+      zpwv/l6dsSWxoHqhym/h2gcMYoZo8p/aLIgaDVC+Vmfv0H99lJDC6PXMYiXEc/kW0AbOr2gt9L
+      eeGqv3GtfeKUMRZgdXUm49U0pdZykRjo0v6UXgjocewsnYa7YJcXpRlYSNB0BDJ3rdaRowfh74
+      0e9qS9x6cGEs3j7dfnUHiP5U4NGU6X6fc7lsKm3IaqH4Xtr+aSwmtaLhmo56LRdz4l73de4d/s
+      cheris11J6LqM1lZc=
