@@ -200,6 +200,9 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+  &.sm {
+    @include relative-font-size(1.1);
+  }
 }
 
 
