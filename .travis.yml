@@ -2,6 +2,23 @@ sudo: required
 
 language: ruby
 
+env:
+  global:
+    - secure: >
+      XJkrcPoIdYePUS0pWB003NKWKzD0Knfza1oYF7f9XcKmD18ciPnc07U+AiDolGd8lFozN06Ty
+      0r1Vo1CTR2rm93wZJegII8MkZNAMgBHbR9FJDaeDcyUy37KxT4LlQ/QFBO++xVgagYfO7tbbu
+      1M0YHbrpRvLwawopBJFROliWRzVsGI9qCooBYEH6Pdxdk2kDJGJRq6BEcT65HDY3i+ocRbfaW
+      SK1T+bq1uH2LF65+N0b8uzbRdWRJvOEgijb6XtNUaa7OMpQ7IUdaajXdhSzfgEjifypgWMJmy
+      oZIy7tFuAR0oV4JMXhVU9ynrP/XQWiVorntDC6/EpBGbX1rNP4LoLT7uQtN8P9U6dJcWnvLFy
+      VnDf5maSVut1p+QUb2Q26I7FkXW4wUzi02eOxjdc7L/evREouCzKcKxVyq5I9gJY9h+h+/W+z
+      Jw4kvU/InvU8iBrneVddHrNuz/v6yXxsrAbfnHm+7kMr6GVtbgCtl9cg/GFBsSehC7bmb5u5E
+      mTnZiWNjjw4mG6btOyx9akyMzxsJoP92Q4nv3CfiVdGeilywoBGKw84EVQPFnwVY9D3Q2WbLq
+      BwlcnKm5JD/gpGdlIZdZVg8Rpp59a2LApd/m+rohNX1ttK6wZXQkgQAubUw1n+7s03IxE4sz3
+      djVu7LMsIUoZXaHY2VnGhra67A=
+
+addons:
+  ssh_known_hosts: zackad.com
+
 services:
   - docker
 
@@ -11,27 +28,39 @@ before_install:
 install: true
 
 script:
-  - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll@sha256:74b0faebb8faaa58673cc73b5e9d6c8b87d7f558a41d582c106ed97afdf2f17d jekyll build
+  - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it
+    jekyll/jekyll@sha256:74b0faebb8faaa58673cc73b5e9d6c8b87d7f558a41d582c106ed97afdf2f17d
+    jekyll build
 
 before_deploy:
   - sudo chown -R travis:travis /home/travis/
+  - openssl aes-256-cbc -K $encrypted_e471f2b656d3_key -iv $encrypted_e471f2b656d3_iv
+    -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: _site
-  repo: zackad/zackad.github.io
-  target_branch: master
-  name: DeployBot
-  github_token:
-    secure: >
-      Cg9MV/aerNi1gdGmqfVoTk4N3an0uQKT1aqkNzQjOIqrNc/1IDALlGXnwR+FQuepSa5HmRLz/p
-      veKe7uOJ2OktnI83K2jMqSrRplRCyAGqGCVEreKI7nAwrXmUl3ovVJrwdfBjUjpWOYtoQHZ3qu
-      08ywsnysBSrH+a4kgrmQE/MV0sPoY+uaD9RcUKllVVLj0P76Ld4NlL8zklK2zPX6uKXvQ1zs1s
-      7jhRSY6250ujrSsoHaePn75TmFYluxLkg7BPaoz4IcF2k+LXDgS/vr7+d/5E7Ifk81d8j2KXZ9
-      vvlT9Gg0JjqIZYcKN+wTNbcGlk23TPEuRiMiu4gqMdRBtE/MfUPLNDwb7RWxLxZBUf+pnCFNVh
-      A10qsrsRbIa1xVA4DzUy2Ztc/IDLYueKcJ1KKz9RziJkbfU6lvUBU2v+w19S5slk8SZqKIP9Mp
-      zpwv/l6dsSWxoHqhym/h2gcMYoZo8p/aLIgaDVC+Vmfv0H99lJDC6PXMYiXEc/kW0AbOr2gt9L
-      eeGqv3GtfeKUMRZgdXUm49U0pdZykRjo0v6UXgjocewsnYa7YJcXpRlYSNB0BDJ3rdaRowfh74
-      0e9qS9x6cGEs3j7dfnUHiP5U4NGU6X6fc7lsKm3IaqH4Xtr+aSwmtaLhmo56LRdz4l73de4d/s
-      cheris11J6LqM1lZc=
+  - provider: pages
+    skip_cleanup: true
+    local_dir: _site
+    repo: zackad/zackad.github.io
+    target_branch: master
+    name: DeployBot
+    github_token:
+      secure: >
+        Cg9MV/aerNi1gdGmqfVoTk4N3an0uQKT1aqkNzQjOIqrNc/1IDALlGXnwR+FQuepSa5HmRLz/p
+        veKe7uOJ2OktnI83K2jMqSrRplRCyAGqGCVEreKI7nAwrXmUl3ovVJrwdfBjUjpWOYtoQHZ3qu
+        08ywsnysBSrH+a4kgrmQE/MV0sPoY+uaD9RcUKllVVLj0P76Ld4NlL8zklK2zPX6uKXvQ1zs1s
+        7jhRSY6250ujrSsoHaePn75TmFYluxLkg7BPaoz4IcF2k+LXDgS/vr7+d/5E7Ifk81d8j2KXZ9
+        vvlT9Gg0JjqIZYcKN+wTNbcGlk23TPEuRiMiu4gqMdRBtE/MfUPLNDwb7RWxLxZBUf+pnCFNVh
+        A10qsrsRbIa1xVA4DzUy2Ztc/IDLYueKcJ1KKz9RziJkbfU6lvUBU2v+w19S5slk8SZqKIP9Mp
+        zpwv/l6dsSWxoHqhym/h2gcMYoZo8p/aLIgaDVC+Vmfv0H99lJDC6PXMYiXEc/kW0AbOr2gt9L
+        eeGqv3GtfeKUMRZgdXUm49U0pdZykRjo0v6UXgjocewsnYa7YJcXpRlYSNB0BDJ3rdaRowfh74
+        0e9qS9x6cGEs3j7dfnUHiP5U4NGU6X6fc7lsKm3IaqH4Xtr+aSwmtaLhmo56LRdz4l73de4d/s
+        cheris11J6LqM1lZc=
+  - provider: script
+    skip_cleanup: true
+    script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/_site/ $target_path
+    on:
+      branch: master
