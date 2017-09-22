@@ -5,7 +5,7 @@ tags: android react
 ---
 Getting started with android development using react-native.
 
-In this guide, we won't install android studio since we will use standard text editor such as atom.io, sublime text or even gedit. There's no need to install full blown IDE to develop android with react native. Since all the necessacy tool and process will using command line. That's why we want to install minimal amount of tool to save more storage space. Not only that, we won't install android virtual device (avd) to save more space and use actual device as testing and debug device.
+In this guide, we won't install android studio since we will use standard text editor such as **atom**, **sublime text** or even **gedit**. There's no need to install full blown IDE to develop android with `react-native`. Since all the necessacy tool and process will be using command line. That's why we want to install minimal amount of tool to save more storage space. Not only that, we won't install android virtual device (avd) to save more space and use actual device as testing and debug device.
 
 > **Note :** it is recommended to use actual device instead of virtual device.
 
@@ -19,7 +19,7 @@ sudo apt-get install openjdk-8-jdk
 
 This will install all the necessary package to start developing java application, in this case android application.
 
-There's no particular reasson why we use `openjdk-8`, if you need to use older/newer version or other java sdk feel free to install those.
+There's no particular reason why we use `openjdk-8`, if you need to use older/newer version or other java sdk feel free to install those.
 
 ## Step 2 — Installing NodeJS and NPM
 
@@ -55,7 +55,7 @@ v6.10.0
 3.10.10
 ```
 
-## Step 3 — Instal and Setup Android SDK (Command Line Tools only)
+## Step 3 — Install and Setup Android SDK (Command Line Tools only)
 
 ### Create a new folder in your home directory named *Android*
 
@@ -196,7 +196,8 @@ In this case, it's `22b8`. That's the identifier for Motorola.
 You'll need to input this into your udev rules in order to get up and running:
 
 ```bash
-echo SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev" | sudo tee /etc/udev/rules.d/51-android-usb.rules
+echo SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev" \
+    | sudo tee /etc/udev/rules.d/51-android-usb.rules
 ```
 
 Make sure that you replace 22b8 with the identifier you get in the above command.
