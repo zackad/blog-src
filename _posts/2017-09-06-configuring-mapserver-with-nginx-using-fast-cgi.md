@@ -99,7 +99,7 @@ sudo /etc/init.d/mapserv start
 
 ## Nginx configuration
 
-```bash
+```nginx
 server {
     listen 80;
     listen [::]:80;
@@ -127,13 +127,13 @@ http://mapserver-example.com/?map=/path/to/mapfile.map
 If we don't want to expose sensitive information such as mapfile location, we can hide it using url rewrite.
 From configuration file above, add the following code to location block
 
-```bash
+```nginx
 rewrite ^/(.*)$ /?map=/path/to/location/of/mapfile.map$1 break;
 ```
 
 So the configuration file would become
 
-```bash
+```nginx
 # Server block
 
 location / {
