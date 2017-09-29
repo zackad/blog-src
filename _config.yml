@@ -51,6 +51,9 @@ exclude:
   - LICENSE
   - README.md
   - deploy_rsa.enc
+  - node_modules
+  - package.json
+  - package-lock.json
 sass:
   style: compressed
 
