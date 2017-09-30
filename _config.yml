@@ -46,14 +46,18 @@ plugins_dir:
   - jekyll-sitemap
   - ./_plugins
 exclude:
-  - Gemfile
-  - Gemfile.lock
+  # Exclude directories
+  - js
+  - node_modules
+  # Exclude files
   - LICENSE
   - README.md
+  - Gemfile
+  - Gemfile.lock
   - deploy_rsa.enc
-  - node_modules
   - package.json
   - package-lock.json
+  - webpack.config.js
 sass:
   style: compressed
 
