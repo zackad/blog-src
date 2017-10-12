@@ -4,6 +4,9 @@
   "description": "[![Build Status](https://travis-ci.org/zackad/blog-sources.svg?branch=master)](https://travis-ci.org/zackad/blog-sources)",
   "main": "index.js",
   "scripts": {
+    "build": "NODE_ENV=production webpack -p",
+    "css": "csso _site/assets/main.css --output _site/assets/main.css",
+    "prod": "npm run build && npm run css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
