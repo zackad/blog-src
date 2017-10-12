@@ -32,10 +32,10 @@ script:
   - docker run --env JEKYLL_ENV=production --rm --volume=$PWD:/srv/jekyll -it
     jekyll/jekyll@sha256:74b0faebb8faaa58673cc73b5e9d6c8b87d7f558a41d582c106ed97afdf2f17d
     jekyll build
+  - sudo chown -R travis:travis /home/travis/
   - npm run prod
 
 before_deploy:
-  - sudo chown -R travis:travis /home/travis/
   - openssl aes-256-cbc -K $encrypted_e471f2b656d3_key -iv $encrypted_e471f2b656d3_iv
     -in deploy_rsa.enc -out /tmp/deploy_rsa -d
   - eval "$(ssh-agent -s)"
