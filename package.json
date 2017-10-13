@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "css": "csso _site/assets/main.css --output _site/assets/main.css",
+    "dev": "webpack -w",
     "prod": "npm run build && npm run css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
