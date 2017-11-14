@@ -19,3 +19,4 @@ title: "List of Important Articles or Tutorials"
 - [Travis-CI SSH Deploy](https://oncletom.io/2016/travis-ssh-deploy/)
 - [Change Expiration Date of GPG Key](https://www.g-loaded.eu/2010/11/01/change-expiration-date-gpg-key/)
 - [Adblock Rules Explained](https://adblockplus.org/filter-cheatsheet)
+- [Compose Key Cheat Sheet](https://fsymbols.com/keyboard/linux/compose/)
