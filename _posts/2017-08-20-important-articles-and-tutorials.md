@@ -20,3 +20,4 @@ title: "List of Important Articles or Tutorials"
 - [Change Expiration Date of GPG Key](https://www.g-loaded.eu/2010/11/01/change-expiration-date-gpg-key/)
 - [Adblock Rules Explained](https://adblockplus.org/filter-cheatsheet)
 - [Compose Key Cheat Sheet](https://fsymbols.com/keyboard/linux/compose/)
+- [Dark Theme Save The World](http://ecoiron.blogspot.co.id/2007/01/black-google-would-save-3000-megawatts.html)
