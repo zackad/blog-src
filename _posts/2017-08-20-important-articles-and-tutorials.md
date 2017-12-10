@@ -12,6 +12,10 @@ title: "List of Important Articles or Tutorials"
 - [Understand JavaScript Callback Functions and Use Them](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
 - [Callback hell](http://callbackhell.com/)
 
+## PHP
+
+- [PDO Cheat Sheet](https://phpdelusions.net/pdo/fetch_modes)
+
 ## Miscellaneous
 
 - [Vim Cheat Sheet](https://vim.rtorr.com/)
