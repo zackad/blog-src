@@ -2,6 +2,8 @@
 layout: post
 title: "List of Important Articles or Tutorials"
 ---
+A currated list of usefull/awesome tutorials and guides found on the internet.
+
 ## Arduino and Electronics
 
 - [Getting Started with LCD 16x2 character](https://www.arduino.cc/en/Tutorial/HelloWorld)
