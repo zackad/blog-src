@@ -13,6 +13,7 @@ A currated list of usefull/awesome tutorials and guides found on the internet.
 
 - [Understand JavaScript Callback Functions and Use Them](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
 - [Callback hell](http://callbackhell.com/)
+- [Setup ReactJS with Webpack](https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel)
 
 ## PHP
 
