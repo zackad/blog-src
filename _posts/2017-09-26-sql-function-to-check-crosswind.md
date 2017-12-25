@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SQL Function to Check Crosswind
+tags: sql function
 ---
 A simple function to check if a wind component is crosswind for airport runway direction planning. Using MySQL as database engine and analysis tool, this function can help to simplify checking usability factor of runway direction with given meteorogical data.
 

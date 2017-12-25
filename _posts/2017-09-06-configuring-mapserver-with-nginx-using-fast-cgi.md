@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Configuring Mapserver With NGINX Using Fast CGI"
+tags: linux sysadmin
 ---
 ## Prerequisites
 

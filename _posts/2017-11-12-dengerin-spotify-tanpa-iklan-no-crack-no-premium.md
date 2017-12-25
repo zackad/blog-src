@@ -2,6 +2,7 @@
 layout: post
 title: Dengerin Spotify Tanpa Iklan Di PC (No crack, no premium)
 category: id
+tags: trick tip
 ---
 Inilah cara paling mudah dengerin spotify tanpa terganggu iklan. Tanpa instal software tambahan, tanpa upgrade ke premium, dan tanpa bajak akun punya orang lain.
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to Extend Line with ArcGIS
+tags: gis processing
 ---
 Example of how to extend line feature (eg. road digitation) in order to cleanup the dangels using ArcGIS 10.1.
 

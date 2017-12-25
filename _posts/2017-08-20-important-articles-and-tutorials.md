@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "List of Important Articles or Tutorials"
+tags: bookmark
 ---
 A currated list of usefull/awesome tutorials and guides found on the internet.
 
