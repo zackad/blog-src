@@ -8,14 +8,13 @@
             <li>{% include icons/icon-email.html email=site.social.email %}</li>
           {% endif %}
           {% if site.social.github %}
-          <li>
-            {% include icon-github.html github=site.social.github %}
-          </li>
+            <li>{% include icons/icon-github.html github=site.social.github %}</li>
+          {% endif %}
+          {% if site.social.gitlab %}
+            <li>{% include icons/icon-gitlab.html gitlab=site.social.gitlab %}</li>
           {% endif %}
           {% if site.social.twitter %}
-          <li>
-            {% include icon-twitter.html twitter=site.social.twitter %}
-          </li>
+            <li>{% include icons/icon-twitter.html twitter=site.social.twitter %}</li>
           {% endif %}
         </ul>
       </div>
