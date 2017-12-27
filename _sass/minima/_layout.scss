@@ -7,7 +7,12 @@
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid $grey-color-light;
+  box-shadow: 0 2px 10px 3px #cccc;
+  top: 0;
 }
 
 .site-title {
@@ -167,6 +172,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  margin-top: 60px;
 }
 
 .page-heading {
