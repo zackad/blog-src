@@ -17,14 +17,14 @@
       </div>
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.sosial.github %}
+          {% if site.social.github %}
           <li>
-            {% include icon-github.html github=site.sosial.github %}
+            {% include icon-github.html github=site.social.github %}
           </li>
           {% endif %}
-          {% if site.twitter_username %}
+          {% if site.social.twitter %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.html twitter=site.social.twitter %}
           </li>
           {% endif %}
         </ul>
