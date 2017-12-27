@@ -23,6 +23,21 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.zackad.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: zackad
 
+# Sosial media
+sosial:
+  github:
+    username: zackad
+    url: https://github.com/zackad
+  gitlab:
+    username: zackad
+    url: https://gitlab.com/zackad
+  stackoverflow:
+    username: zackad
+    url: https://stackoverflow.com/users/6265296/zackad
+  youtube:
+    username: ZackadDev
+    url: https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ
+
 # Third party services
 disqus:
   shortname: zackadtech
