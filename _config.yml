@@ -24,7 +24,7 @@ url: "http://blog.zackad.com" # the base hostname & protocol for your site, e.g.
 github_username: zackad
 
 # Sosial media
-sosial:
+social:
   github:
     username: zackad
     url: https://github.com/zackad
