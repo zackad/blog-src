@@ -29,15 +29,19 @@ social:
   github:
     username: zackad
     url: https://github.com/zackad
+    enabled: true
   gitlab:
     username: zackad
     url: https://gitlab.com/zackad
+    enabled: false
   stackoverflow:
     username: zackad
     url: https://stackoverflow.com/users/6265296/zackad
+    enabled: true
   youtube:
     username: ZackadDev
     url: https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ
+    enabled: false
 
 # Third party services
 disqus:
