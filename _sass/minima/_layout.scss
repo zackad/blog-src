@@ -165,6 +165,31 @@
   }
 }
 
+.page-pagination {
+  font-size: $small-font-size;
+  display: block;
+  overflow: hidden;
+  width: auto;
+  a {
+    color: $grey-color-dark;
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 0.5em 0;
+  }
+  .next {
+    text-align: right;
+  }
+  @include media-query($on-palm) {
+    a {
+      width: 100%;
+    }
+    .next {
+      text-align: left;
+    }
+  }
+}
+
 
 
 /**
