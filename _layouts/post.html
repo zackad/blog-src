@@ -28,16 +28,16 @@ layout: default
       {% endfor %}
     </p>
   </footer>
+  <hr>
+  <div class="page-pagination">
+    {% if page.previous.url %}
+      <a href="{{page.previous.url}}" class="prev">&laquo; {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{page.next.url}}" class="next">{{ page.next.title }} &raquo;</a>
+    {% endif %}
+  </div>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
 </article>
-<hr>
-<div class="page-pagination">
-  {% if page.previous.url %}
-    <a href="{{page.previous.url}}" class="prev">&laquo; {{ page.previous.title }}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a href="{{page.next.url}}" class="next">{{ page.next.title }} &raquo;</a>
-  {% endif %}
-</div>
