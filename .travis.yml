@@ -27,7 +27,7 @@ install:
   - npm install
 
 script:
-  - jekyll build
+  - JEKYLL_ENV=production jekyll build
   - npm run prod
 
 before_deploy:
