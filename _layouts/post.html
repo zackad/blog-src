@@ -28,7 +28,7 @@ layout: default
       {% endfor %}
     </p>
   </footer>
-  <hr>
+  <hr class="grey">
   <div class="page-pagination">
     {% if page.previous.url %}
       <a href="{{page.previous.url}}" class="prev">&laquo; {{ page.previous.title }}</a>
@@ -37,6 +37,7 @@ layout: default
       <a href="{{page.next.url}}" class="next">{{ page.next.title }} &raquo;</a>
     {% endif %}
   </div>
+  <hr>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
