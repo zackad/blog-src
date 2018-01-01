@@ -22,13 +22,8 @@ addons:
 before_install:
   - export TZ=Asia/Jakarta
 
-install:
-  - bundle install
-  - npm install
-
 script:
   - JEKYLL_ENV=production jekyll build
-  - npm run prod
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_e471f2b656d3_key -iv $encrypted_e471f2b656d3_iv
