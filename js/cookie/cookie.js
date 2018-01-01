@@ -18,11 +18,6 @@ if (cookie.get('cc') === 'agree') {
 }
 
 function acceptCookie () {
-    console.log('acceptCookie');
     cookie.set('cc', 'agree', {expires: 30});
     this.parentNode.classList.add('hide');
-}
-
-function log(x) {
-    console.log(x);
 }
