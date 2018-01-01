@@ -23,10 +23,5 @@
   "homepage": "https://github.com/zackad/blog-sources#readme",
   "dependencies": {
     "cookie_js": "^1.2.2"
-  },
-  "devDependencies": {
-    "csso-cli": "^1.1.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "webpack": "^3.6.0"
   }
 }
