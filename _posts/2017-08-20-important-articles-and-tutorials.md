@@ -21,6 +21,7 @@ A currated list of usefull/awesome tutorials and guides found on the internet.
 - [PDO Cheat Sheet](https://phpdelusions.net/pdo/fetch_modes)
 - [Create Your Own Framework With Symfony Components](http://symfony.com/doc/current/create_framework/index.html)
 - [Guide of Test Driven Development](https://code.tutsplus.com/tutorials/lets-tdd-a-simple-app-in-php--net-26186)
+- [Create Wordpress Theme From Scratch](https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/)
 
 ## Miscellaneous
 
