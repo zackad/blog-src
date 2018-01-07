@@ -264,6 +264,12 @@
 }
 
 .post-content {
+  @include relative-font-size(1.25);
+
+  @include media-query($on-palm) {
+    font-size: 1em;
+  }
+
   h2 {
     @include relative-font-size(2);
 
