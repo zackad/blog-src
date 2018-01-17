@@ -3,3 +3,46 @@ layout: page
 title: Archives
 permalink: /archives/
 ---
+<ul class="archive-list">
+  {% assign year = "" %}
+  {% assign month = "" %}
+  {% for post in site.posts %}
+
+    {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture post_month %}{{ post.date | date: "%B" }}{% endcapture %}
+
+    {% if post_year == year %}
+
+      {% if post_month == month %}
+
+        <li>{{ post.title }}</li>
+
+      {% else %}
+
+        {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
+        {{ post_month }}
+        <li>{{ post.title }}</li>
+
+      {% endif %}
+
+    {% else %}
+
+      {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      <li>{{ post_year }}</li>
+
+      {% if post_month == month %}
+
+        <li>{{ post.title }}</li>
+
+      {% else %}
+
+        {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
+        {{ post_month }}
+        <li>{{ post.title }}</li>
+
+      {% endif %}
+
+    {% endif %}
+
+  {% endfor %}
+</ul>
