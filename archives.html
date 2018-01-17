@@ -15,20 +15,20 @@ permalink: /archives/
 
       {% if post_month == month %}
 
-        <li>{{ post.title }}</li>
+        <li class="archive-item">{{ post.title }}</li>
 
       {% else %}
 
         {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
-        {{ post_month }}
-        <li>{{ post.title }}</li>
+        <span class="month">{{ post_month }}</span>
+        <li class="archive-item">{{ post.title }}</li>
 
       {% endif %}
 
     {% else %}
 
       {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      <li>{{ post_year }}</li>
+      <li class="year">{{ post_year }}</li>
 
       {% if post_month == month %}
 
@@ -37,8 +37,8 @@ permalink: /archives/
       {% else %}
 
         {% capture month %}{{ post.date | date: "%B" }}{% endcapture %}
-        {{ post_month }}
-        <li>{{ post.title }}</li>
+        <span class="month">{{ post_month }}</span>
+        <li class="archive-item">{{ post.title }}</li>
 
       {% endif %}
 
