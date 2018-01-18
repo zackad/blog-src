@@ -3,6 +3,8 @@ layout: post
 title: "Configuring Mapserver With NGINX Using Fast CGI"
 tags: linux sysadmin
 ---
+Mapserver is an Open Source platform for publishing spatial data and interactive mapping application to the web. In this tutorial we will using `nginx` as reverse proxy to forward request to mapserver cgi process in the backgraound.
+
 ## Prerequisites
 
 - Mapserver (available in ubuntu main repository 16.04 and above)
@@ -22,8 +24,8 @@ sudo apt-get install spawn-fcgi
 
 Running mapserver as cgi service. Create file in */etc/init.d/mapserv* with superuser privilege. Put this content and save.
 
-```bash
-#! /bin/sh
+```shell
+#!/usr/bin/env sh
 #
 # description: Mapserver Service Manager
 # processname: lt-mapserv
@@ -34,7 +36,7 @@ Running mapserver as cgi service. Create file in */etc/init.d/mapserv* with supe
 #. /etc/sysconfig/network
 if [ "$NETWORKING" = "no" ]
 then
-        exit 0
+    exit 0
 fi
 PREFIX=/usr
 NAME=mapserv
@@ -57,8 +59,8 @@ stop () {
         RETVAL=$?
         echo
     if [ $RETVAL -eq 0 ] ; then
-                rm -f $PID
-        fi
+        rm -f $PID
+    fi
 }
 restart () {
     stop
@@ -66,23 +68,23 @@ restart () {
 }
 # See how we were called.
 case "$1" in
-  start)
+    start)
         start
     ;;
-  stop)
+    stop)
         stop
     ;;
-  status)
-    status lt-mapserv
+    status)
+        status lt-mapserv
         RETVAL=$?
-        ;;
-  restart)
-    restart
-        ;;
-  *)
+    ;;
+    restart)
+        restart
+    ;;
+    *)
         echo $"Usage: $0 {start|stop|status|restart}"
         RETVAL=2
-        ;;
+    ;;
 esac
 exit $RETVAL
 ```
