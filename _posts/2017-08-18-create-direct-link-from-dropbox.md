@@ -4,6 +4,8 @@ title: "How To Create Direct Link From Dropbox"
 category: en
 tags: tutorial
 ---
+It's easy to create direct link into file uploaded to Dropbox. Here's how to do it.
+
 {% youtube t4GJTViRSqo %}
 
 - Login to your Dropbox account
