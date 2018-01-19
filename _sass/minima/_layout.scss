@@ -192,6 +192,12 @@
     border-radius: 5px;
     padding: $spacing-unit / 4;
   }
+
+  @include media-query($on-palm) {
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .post-meta {
