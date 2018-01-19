@@ -187,10 +187,19 @@
     margin-bottom: $spacing-unit / 4;
   }
 
+  h2 {
+    margin-bottom: 0;
+  }
+
   .post-item {
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     padding: $spacing-unit / 4;
+  }
+
+  hr {
+    color: $grey-color;
+    margin: 10px 0;
   }
 
   @include media-query($on-palm) {
