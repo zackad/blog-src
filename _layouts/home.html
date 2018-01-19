@@ -5,7 +5,7 @@ layout: default
   {{ content }}
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+      <li class="post-item">
         <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {% if post.date_modified %}
