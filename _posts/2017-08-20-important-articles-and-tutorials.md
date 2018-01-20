@@ -33,3 +33,4 @@ A currated list of usefull/awesome tutorials and guides found on the internet.
 - [Compose Key Cheat Sheet](https://fsymbols.com/keyboard/linux/compose/)
 - [Dark Theme Save The World](http://ecoiron.blogspot.co.id/2007/01/black-google-would-save-3000-megawatts.html)
 - [Tracking Dotfiles With Git](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+- [Programmer Jokes](https://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
