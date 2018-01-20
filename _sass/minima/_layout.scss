@@ -273,6 +273,7 @@
   .year {
     @include relative-font-size(1.5);
     margin-left: -$spacing-unit / 2;
+    margin-top: $spacing-unit / 2;
   }
   .month {
     @include relative-font-size(1.3);
