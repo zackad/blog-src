@@ -282,6 +282,21 @@
     margin-left: $spacing-unit;
     list-style: square;
   }
+
+  @include media-query($on-palm) {
+    .year {
+      @include relative-font-size(1.25);
+      margin-left: -$spacing-unit;
+    }
+    .month {
+      @include relative-font-size(1.1);
+      margin-left: -$spacing-unit / 2;
+    }
+    .archive-item {
+      @include relative-font-size(1);
+      margin-left: $spacing-unit / 4;
+    }
+  }
 }
 
 
