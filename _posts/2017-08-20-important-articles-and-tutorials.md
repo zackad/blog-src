@@ -34,3 +34,4 @@ A currated list of usefull/awesome tutorials and guides found on the internet.
 - [Dark Theme Save The World](http://ecoiron.blogspot.co.id/2007/01/black-google-would-save-3000-megawatts.html)
 - [Tracking Dotfiles With Git](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
 - [Programmer Jokes](https://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
+- [[Solved] Spotify Ubuntu Can't Play Local File](https://community.spotify.com/t5/Desktop-Linux/Linux-Local-files-do-not-play-on-Ubuntu-16-04-SOLVED/td-p/1343831)
