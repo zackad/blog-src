@@ -38,6 +38,10 @@ social:
     username: zackad
     url: https://stackoverflow.com/users/6265296/zackad
     enabled: true
+  twitter:
+    username: ZackadDev
+    url: https://twitter.com/ZackadDev
+    enabled: true
   youtube:
     username: ZackadDev
     url: https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ
