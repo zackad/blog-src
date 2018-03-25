@@ -42,6 +42,7 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
+@import "minima/print";
 @import "minima/base";
 @import "minima/layout";
 @import "syntax/monokai";
