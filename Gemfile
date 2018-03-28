@@ -19,7 +19,6 @@ gem "jekyll"
 group :jekyll_plugins do
    gem "jekyll-feed"
    gem "jekyll-livereload"
-   gem "jekyll-archives"
    gem "jekyll-tidy"
    gem "jekyll-compose"
    gem "jekyll-sitemap"

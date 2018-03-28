@@ -65,7 +65,6 @@ future: true
 markdown: kramdown
 plugins_dir:
   - jekyll-feed
-  - jekyll-archives
   - jekyll-tidy
   - jekyll-sitemap
   - ./_plugins
@@ -84,20 +83,3 @@ exclude:
   - webpack.config.js
 sass:
   style: compressed
-
-# jekyll archives plugin
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - tags
-  layouts:
-    year: archive-year
-    month: archive-month
-    tag: archive-tags
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
