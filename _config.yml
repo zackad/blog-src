@@ -36,7 +36,7 @@ social:
     enabled: false
   stackoverflow:
     username: zackad
-    url: https://stackoverflow.com/users/6265296/zackad
+    url: https://stackoverflow.com/users/story/6265296
     enabled: true
   twitter:
     username: ZackadDev
