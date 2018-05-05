@@ -5,6 +5,25 @@ tags: ubuntu mirror
 ---
 Ubuntu has so many mirror repository we can choose. Sometimes the mirror exists in our country that near with our internet provider.
 
+## Update
+
+> Thank to [this answer][answer] on askubuntu.com we can automatically select fastest (maybe) mirror based on our geographic location.
+
+This configuration will automatically select best mirror based on our geographic location. However, this doesn't necessary mean the fastest server. Add following entry at the top of `/etc/apt/source.list` file. You may delete other entry if you wish.
+
+```shell
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-security main restricted universe multiverse
+```
+
+Change `xenial` part with your ubuntu version such as *trusty, artful, bionic*.
+
+---
+
+> The following is for other option to select ubuntu mirror.
+
 ## Requirements
 
 - Python with pip package manager
@@ -74,3 +93,5 @@ cp /etc/apt/sources.list /etc/apt/sources.list.backup
 # Copy the generated file
 cp sources.list /etc/apt/sources.list
 ```
+
+[answer]:https://askubuntu.com/a/9035/562900
