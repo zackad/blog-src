@@ -418,3 +418,15 @@
 .grey {
   color: #0003;
 }
+
+/**
+ * Disqus comment user action
+ */
+.show-comment {
+  padding: 20px;
+  margin-top: 5px;
+  text-align: center;
+  color: darkturquoise;
+  border: 1px solid $grey-color-light;
+  cursor: pointer;
+}
