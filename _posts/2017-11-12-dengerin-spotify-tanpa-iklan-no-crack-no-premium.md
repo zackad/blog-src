@@ -10,7 +10,7 @@ Inilah cara paling mudah dengerin spotify tanpa terganggu iklan. Tanpa instal so
 
 ## Daftar host list yang akan di blok
 
-- Buka web browser dan akses `https://github.com/zackad/dotfiles/blob/master/hosts.d/ads_spotify.conf`
+- Buka web browser dan akses `https://github.com/zackad/dotfiles/blob/master/hosts.d/ads_spotify.conf` atau [klik disini][hostfile-url]
 - Copy isi file tersebut (kurang lebih seperti dibawah ini)
 
 ```
@@ -57,6 +57,8 @@ Inilah cara paling mudah dengerin spotify tanpa terganggu iklan. Tanpa instal so
 127.0.0.1       www.omaze.com
 ```
 
+> **Note:** Untuk daftar list yang uptodate, cek [disini][hostfile-url].
+
 ## Edit file host
 
 **Windows user**
@@ -78,3 +80,5 @@ Setelah file berhasil disimpan, sebaiknya restart Spotify kalau sebelumnya telah
 ## Referensi
 
 - https://www.reddit.com/r/Piracy/comments/4kn6rq/comprehensive_guide_to_blocking_ads_on_spotify/
+
+[hostfile-url]: https://github.com/zackad/dotfiles/blob/master/hosts.d/ads_spotify.conf
