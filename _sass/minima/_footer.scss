@@ -12,8 +12,14 @@
 }
 
 .contact-list {
+  text-align: center;
   list-style: none;
   margin-left: 0;
+}
+
+.contact-list .icons a {
+  text-decoration: none;
+  margin: 5px;
 }
 
 .footer-col-wrapper {
