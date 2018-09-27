@@ -7,21 +7,23 @@
           {% if site.social.email %}
             <li>{% include icons/icon-email.html email=site.social.email %}</li>
           {% endif %}
-          {% if site.social.github and site.social.github.enabled %}
-            <li>{% include icons/icon-github.html github=site.social.github %}</li>
-          {% endif %}
-          {% if site.social.gitlab and site.social.gitlab.enabled %}
-            <li>{% include icons/icon-gitlab.html gitlab=site.social.gitlab %}</li>
-          {% endif %}
-          {% if site.social.stackoverflow and site.social.stackoverflow.enabled %}
-            <li>{% include icons/icon-stackoverflow.html stackoverflow=site.social.stackoverflow %}</li>
-          {% endif %}
-          {% if site.social.twitter and site.social.twitter.enabled %}
-            <li>{% include icons/icon-twitter.html twitter=site.social.twitter %}</li>
-          {% endif %}
-          {% if site.social.youtube and site.social.youtube.enabled %}
-            <li>{% include icons/icon-youtube.html youtube=site.social.youtube %}</li>
-          {% endif %}
+          <li class="icons">
+            {% if site.social.github and site.social.github.enabled %}
+              {% include icons/icon-github.html github=site.social.github %}
+            {% endif %}
+            {% if site.social.gitlab and site.social.gitlab.enabled %}
+              {% include icons/icon-gitlab.html gitlab=site.social.gitlab %}
+            {% endif %}
+            {% if site.social.stackoverflow and site.social.stackoverflow.enabled %}
+              {% include icons/icon-stackoverflow.html stackoverflow=site.social.stackoverflow %}
+            {% endif %}
+            {% if site.social.twitter and site.social.twitter.enabled %}
+              {% include icons/icon-twitter.html twitter=site.social.twitter %}
+            {% endif %}
+            {% if site.social.youtube and site.social.youtube.enabled %}
+              {% include icons/icon-youtube.html youtube=site.social.youtube %}
+            {% endif %}
+          </li>
         </ul>
       </div>
       <div class="footer-col footer-col-2">
