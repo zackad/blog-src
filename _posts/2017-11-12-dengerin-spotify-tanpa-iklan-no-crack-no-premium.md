@@ -68,7 +68,7 @@ Inilah cara paling mudah dengerin spotify tanpa terganggu iklan. Tanpa instal so
 - Tambahkan kode diatas di bagian bawah file
 - Save
 
-**Linux user**
+**Linux/MacOS user**
 
 - Buka text editor dengan hak akses superuser (sudo)
 - Buka file `/etc/hosts`
