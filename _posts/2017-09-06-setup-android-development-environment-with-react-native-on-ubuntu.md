@@ -5,6 +5,10 @@ tags: android react
 ---
 Getting started with android development using react-native.
 
+> **Warning :** This article may contain outdated/inacurate information. Please refer to latest documentation.
+
+---
+
 In this guide, we won't install android studio since we will use standard text editor such as **atom**, **sublime text** or even **gedit**. There's no need to install full blown IDE to develop android with `react-native`. Since all the necessacy tool and process will be using command line. That's why we want to install minimal amount of tool to save more storage space. Not only that, we won't install android virtual device (avd) to save more space and use actual device as testing and debug device.
 
 > **Note :** it is recommended to use actual device instead of virtual device.
