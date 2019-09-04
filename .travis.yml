@@ -2,20 +2,6 @@ language: ruby
 
 rvm: 2.3
 
-env:
-  global:
-    - secure: >
-        XJkrcPoIdYePUS0pWB003NKWKzD0Knfza1oYF7f9XcKmD18ciPnc07U+AiDolGd8lFozN06
-        Ty0r1Vo1CTR2rm93wZJegII8MkZNAMgBHbR9FJDaeDcyUy37KxT4LlQ/QFBO++xVgagYfO7
-        tbbu1M0YHbrpRvLwawopBJFROliWRzVsGI9qCooBYEH6Pdxdk2kDJGJRq6BEcT65HDY3i+o
-        cRbfaWSK1T+bq1uH2LF65+N0b8uzbRdWRJvOEgijb6XtNUaa7OMpQ7IUdaajXdhSzfgEjif
-        ypgWMJmyoZIy7tFuAR0oV4JMXhVU9ynrP/XQWiVorntDC6/EpBGbX1rNP4LoLT7uQtN8P9U
-        6dJcWnvLFyVnDf5maSVut1p+QUb2Q26I7FkXW4wUzi02eOxjdc7L/evREouCzKcKxVyq5I9
-        gJY9h+h+/W+zJw4kvU/InvU8iBrneVddHrNuz/v6yXxsrAbfnHm+7kMr6GVtbgCtl9cg/GF
-        BsSehC7bmb5u5EmTnZiWNjjw4mG6btOyx9akyMzxsJoP92Q4nv3CfiVdGeilywoBGKw84EV
-        QPFnwVY9D3Q2WbLqBwlcnKm5JD/gpGdlIZdZVg8Rpp59a2LApd/m+rohNX1ttK6wZXQkgQA
-        ubUw1n+7s03IxE4sz3djVu7LMsIUoZXaHY2VnGhra67A=
-
 addons:
   ssh_known_hosts: zackad.com
 
@@ -35,6 +21,6 @@ before_deploy:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/_site/ $target_path
+    script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/_site/ $DEPLOY_TARGET_PATH
     on:
       branch: master
