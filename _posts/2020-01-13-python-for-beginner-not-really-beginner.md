@@ -10,7 +10,7 @@ If you want to learn python as your second (or 3rd, 4th, nth, ...) language, thi
 
 ## Step 1 — Choosing Python Version
 
-Depending on your operating system, python might already installed. Try to type `python --version` on your terminal and see which version is installed on your system. Sometime multiple version of python is installed in a single machine (version 2 and version 3). You can check by typing on your terminal
+Depending on your operating system, python might already installed. Try to type `python --version` on your terminal and see which version is installed. Sometime multiple version of python is installed in a single machine (version 2 and version 3). You can check by typing on your terminal
 
 ```shell
 # Check default python version
@@ -43,6 +43,31 @@ Generally speaking, you should code for python 3 as the target. Unless you need 
 
 ## Step 2 — Creating Virtual Environment
 
+Unlike other language where dependencies are installed locally on project directory (composer on PHP, or npm/yarn on NodeJS), python packages are installed on system wide or user home directory. This will cause conflict when we have project that depend on a package with different version. Let's say we have **Project 1** that depend on _Package A Version 1_ and **Project 2** that depend on _Package A Version 2_. When we importing the package it will cause an error because compatibility issue.
+
+The solution is to isolate these projects into their own environment (or called virtual environment). This will create a directory inside our project with all the binary file that required to run python, including package manager `pip`.
+
+```shell
+# Create project directory and move into it
+mkdir my-python-project
+cd my-python-project
+
+# Create new python environment named .venv
+# .venv is the recommended name
+python -m venv .venv
+
+# Activating virtual environment
+source .venv/bin/activate
+
+# Deactivating virtual environment
+deactivate
+```
+
+After activating python virtual environment (venv) we can start installing our dependencies without affecting system python or other environment. When **venv** is active, this will add a prefix in our shell prompt.
+
+![venv is not activated](/assets/images/python-without-venv.png)
+![venv is activated](/assets/images/python-with-venv.png)
+
 ## Step 3 — Managing Dependencies
 
 ## Step 4 — Choosing Code Editor/IDE
@@ -51,10 +76,10 @@ Generally speaking, you should code for python 3 as the target. Unless you need 
 
 ## Conclusion
 
--   use python 3
--   different environment for different project
--   install dependencies in virtual environment
--   use jupyter notebook to fiddle around
--   keep project history with git
+- use python 3
+- different environment for different project
+- install dependencies in virtual environment
+- use jupyter notebook to fiddle around
+- keep project history with git
 
 [python-download]: https://www.python.org/downloads/
