@@ -8,6 +8,12 @@ date: 2020-01-13 21:29 +0700
 
 If you want to learn python as your second (or 3rd, 4th, nth, ...) language, this guide will give you some advice to manage your code and project structure.
 
+## Preview
+
+<link type="text/css" rel="stylesheet" href="/assets/asciinema/asciinema-player.css"/>
+<asciinema-player src="/assets/asciinema/cast/python-get-started.cast" speed="2" idle-time-limit="1"></asciinema-player>
+<script src="/assets/asciinema/asciinema-player.js"></script>
+
 ## Step 1 — Choosing Python Version
 
 Depending on your operating system, python might already installed. Try to type `python --version` on your terminal and see which version is installed. Sometime multiple version of python is installed in a single machine (version 2 and version 3). You can check by typing on your terminal
@@ -65,14 +71,60 @@ deactivate
 
 After activating python virtual environment (venv) we can start installing our dependencies without affecting system python or other environment. When **venv** is active, this will add a prefix in our shell prompt.
 
-![venv is not activated](/assets/images/python-without-venv.png)
-![venv is activated](/assets/images/python-with-venv.png)
-
 ## Step 3 — Managing Dependencies
+
+The default package manager for python is pip (in fact I don't even know if there's other). After we activate `venv` we can start install/add dependencies into our project.
+
+```shell
+# Make sure to activate virtual environment
+source .venv/bin/activate
+
+# If this is a new project, start by adding dependencies
+pip install numpy matplotlib # and other dependencies we need
+
+# Save dependencies list into known state
+pip freeze > requirements.txt
+
+# If this is a project checked out from other source such as git repo
+# we can install the dependencies with following command.
+# (Assuming that "requirements.txt" file is exist in the project)
+pip install -r requirements.txt
+```
 
 ## Step 4 — Choosing Code Editor/IDE
 
-## Step 5 — Enabling Version Control
+Dependending what kind of project we want to build, we might need different editor/IDE. If we just want to fiddle around and explore about python syntax and capabilities, I recommend to use [jupyter notebook][install-jupyter].
+
+```shell
+pip install jupyterlab
+```
+
+> **Note**: Whenever we install a new package/dependency, we need to run `pip freeze > requirements.txt` to save our dependencies list.
+
+After installing jupyter we can start by running this command to start the notebook.
+
+```shell
+jupyter notebook
+```
+
+Open web browser and visit "http://localhost:8888/" to access the notebook. Try creating a new notebook by clicking _New > Python 3 Notebook_. Now we can star fiddle around.
+
+## Step 5 — Enabling Version Control (Optional)
+
+```shell
+# Initiating git repository
+git init
+```
+
+Add following entries to your _.gitignore_
+
+```shell
+# The name or virtual environment
+.venv
+
+# jupyter notebook checkpoints
+ipynb_checkpoints
+```
 
 ## Conclusion
 
@@ -82,4 +134,5 @@ After activating python virtual environment (venv) we can start installing our d
 - use jupyter notebook to fiddle around
 - keep project history with git
 
-[python-download]: https://www.python.org/downloads/
+[no-prefix-prompt]: /assets/images/no-prefix-prompt.png
+[install-jupyter]: https://jupyter.org/install.html
