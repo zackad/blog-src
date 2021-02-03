@@ -1,8 +1,10 @@
+.bundle
 .netlify
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 _drafts
 _site
+vendor
 node_modules
 Gemfile.lock
