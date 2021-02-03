@@ -136,3 +136,4 @@ ipynb_checkpoints
 
 [no-prefix-prompt]: /assets/images/no-prefix-prompt.png
 [install-jupyter]: https://jupyter.org/install.html
+[python-download]: https://www.python.org/downloads/
