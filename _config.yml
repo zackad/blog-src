@@ -17,69 +17,68 @@ title: ZackadDev
 author: zackad
 email: zackad.dev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a simple man. I do what I want and what I could. Otherwise
-  it's a trial and error.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.zackad.com" # the base hostname & protocol for your site, e.g. http://example.com
+    I'm a simple man. I do what I want and what I could. Otherwise
+    it's a trial and error.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://blog.zackad.dev' # the base hostname & protocol for your site, e.g. http://example.com
 github_username: zackad
 
 # Sosial media
 social:
-  email: zackad [dot] dev [at] gmail [dot] com
-  github:
-    username: zackad
-    url: https://github.com/zackad
-    enabled: true
-  gitlab:
-    username: zackad
-    url: https://gitlab.com/zackad
-    enabled: false
-  stackoverflow:
-    username: zackad
-    url: https://stackoverflow.com/users/story/6265296
-    enabled: true
-  twitter:
-    username: ZackadDev
-    url: https://twitter.com/ZackadDev
-    enabled: true
-  youtube:
-    username: ZackadDev
-    url: https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ
-    enabled: false
+    email: zackad [dot] dev [at] gmail [dot] com
+    github:
+        username: zackad
+        url: https://github.com/zackad
+        enabled: true
+    gitlab:
+        username: zackad
+        url: https://gitlab.com/zackad
+        enabled: false
+    stackoverflow:
+        username: zackad
+        url: https://stackoverflow.com/users/story/6265296
+        enabled: true
+    twitter:
+        username: ZackadDev
+        url: https://twitter.com/ZackadDev
+        enabled: true
+    youtube:
+        username: ZackadDev
+        url: https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ
+        enabled: false
 
 # Third party services
 disqus:
-  shortname: zackadtech
+    shortname: zackadtech
 google_analytics: UA-105186998-1
 
 # Build settings
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      category: "en"
-      author: "zackad"
+    - scope:
+          path: ''
+          type: 'posts'
+      values:
+          category: 'en'
+          author: 'zackad'
 future: true
 markdown: kramdown
 plugins_dir:
-  - jekyll-feed
-  - jekyll-tidy
-  - jekyll-sitemap
-  - ./_plugins
+    - jekyll-feed
+    - jekyll-tidy
+    - jekyll-sitemap
+    - ./_plugins
 exclude:
-  # Exclude directories
-  - js
-  - node_modules
-  # Exclude files
-  - LICENSE
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - deploy_rsa.enc
-  - package.json
-  - package-lock.json
-  - webpack.config.js
+    # Exclude directories
+    - js
+    - node_modules
+    # Exclude files
+    - LICENSE
+    - README.md
+    - Gemfile
+    - Gemfile.lock
+    - deploy_rsa.enc
+    - package.json
+    - package-lock.json
+    - webpack.config.js
 sass:
-  style: compressed
+    style: compressed

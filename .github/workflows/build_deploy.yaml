@@ -1,0 +1,38 @@
+name: Build and Deploy to Netlify
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build_and_deploy:
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/cache@v2
+              with:
+                  path: vendor/bundle
+                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-gems-
+            - name: Build with jekyll
+              uses: helaili/jekyll-action@v2
+              with:
+                  build_only: true
+                  pre_build_commands: |
+                      gem install bundler -v 1.17.3
+            - name: Deploy to Netlify
+              uses: nwtgck/actions-netlify@v1.1
+              with:
+                  publish-dir: build
+                  production-branch: master
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: 'Deploy from GitHub Actions'
+                  enable-pull-request-comment: true
+                  enable-commit-comment: false
+                  overwrites-pull-request-comment: true
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              timeout-minutes: 1
