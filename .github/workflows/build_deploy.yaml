@@ -15,19 +15,12 @@ jobs:
             JEKYLL_ENV: production
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/cache@v2
-              with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gems-
-            - uses: actions/setup-ruby@v1
+            - uses: ruby/setup-ruby@v1
               with:
                   ruby-version: '2.6'
-            - name: Install dependencies and build site
+                  bundler-cache: true
+            - name: Build site
               run: |
-                  gem install bundler -v 1.17.3
-                  bundle install --path vendor/bundle
                   bundle exec jekyll build
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v1.1
