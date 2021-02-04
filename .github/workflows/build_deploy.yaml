@@ -4,10 +4,15 @@ on:
     push:
         branches:
             - master
+    pull_request:
+        branches:
+            - master
 
 jobs:
     build_and_deploy:
         runs-on: ubuntu-20.04
+        env:
+            JEKYLL_ENV: production
         steps:
             - uses: actions/checkout@v2
             - uses: actions/cache@v2
@@ -16,16 +21,17 @@ jobs:
                   key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-gems-
-            - name: Build with jekyll
-              uses: helaili/jekyll-action@v2
+            - uses: actions/setup-ruby@v1
               with:
-                  build_only: true
-                  pre_build_commands: |
-                      gem install bundler -v 1.17.3
+                  ruby-version: '2.6'
+            - name: Install dependencies and build site
+              run: |
+                  bundle install --path vendor/bundle
+                  bundle exec jekyll build
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v1.1
               with:
-                  publish-dir: build
+                  publish-dir: _site
                   production-branch: master
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   deploy-message: 'Deploy from GitHub Actions'
