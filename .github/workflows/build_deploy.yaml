@@ -26,6 +26,7 @@ jobs:
                   ruby-version: '2.6'
             - name: Install dependencies and build site
               run: |
+                  gem install bundler -v 1.17.3
                   bundle install --path vendor/bundle
                   bundle exec jekyll build
             - name: Deploy to Netlify
