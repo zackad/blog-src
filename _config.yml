@@ -50,7 +50,6 @@ social:
 # Third party services
 disqus:
     shortname: zackadtech
-google_analytics: UA-105186998-1
 
 # Build settings
 defaults:
