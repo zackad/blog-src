@@ -51,6 +51,11 @@ social:
 disqus:
     shortname: zackadtech
 
+analytics:
+    enabled: true
+    domain: blog.zackad.dev
+    src: https://analytics.zackad.dev/js/plausible.js
+
 # Build settings
 defaults:
     - scope:
