@@ -16,4 +16,7 @@
     href="{{ '/feed.xml' | relative_url
   }}"
   />
+  {% if site.analytics.enabled %}
+  <script async defer data-domain="{{ site.analytics.domain }}" src="{{ site.analytics.src }}"></script>
+  {% endif %}
 </head>
