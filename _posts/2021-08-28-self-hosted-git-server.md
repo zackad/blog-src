@@ -38,6 +38,8 @@ WORKDIR /srv/gitweb
 COPY entrypoint.sh /srv/gitweb/entrypoint.sh
 COPY gitweb_config-example.perl /srv/gitweb/gitweb_config-example.perl
 
+EXPOSE 1234
+
 CMD './entrypoint.sh'
 
 ```
