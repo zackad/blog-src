@@ -246,7 +246,12 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
+
+  h1 {
+    @include relative-font-size(2);
+    margin-bottom: 0;
+  }
 }
 
 .tag {
@@ -270,18 +275,18 @@
 }
 
 .post-content {
-  @include relative-font-size(1.25);
+  @include relative-font-size(1);
 
   @include media-query($on-palm) {
     font-size: 1em;
   }
 
-  h2 {
-    @include relative-font-size(2);
+  h2, h3, h4 {
+    margin-bottom: 0;
+  }
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
+  h2 {
+    @include relative-font-size(1.5);
   }
 
   h3 {
