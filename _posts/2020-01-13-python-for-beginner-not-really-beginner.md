@@ -2,6 +2,7 @@
 layout: post
 title: Python For Beginner (Not Really Beginner!)
 date: 2020-01-13 21:29 +0700
+tags: guide
 ---
 
 > **WARNING:** This article is not for beginner in programming, but for python beginner.
