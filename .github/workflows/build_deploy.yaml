@@ -1,31 +1,22 @@
 name: Build and Deploy to Netlify
 
-on:
-    push:
-        branches:
-            - master
+on: [push, pull_request]
 
 jobs:
     build_and_deploy:
         runs-on: ubuntu-20.04
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/cache@v2
+            - uses: ruby/setup-ruby@v1
               with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gems-
+                  ruby-version: 2.6
+                  bundler-cache: true
             - name: Build with jekyll
-              uses: helaili/jekyll-action@v2
-              with:
-                  build_only: true
-                  pre_build_commands: |
-                      gem install bundler -v 1.17.3
+              run: JEKYLL_ENV=production bundle exec jekyll build
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v1.1
               with:
-                  publish-dir: build
+                  publish-dir: _site
                   production-branch: master
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   deploy-message: 'Deploy from GitHub Actions'
