@@ -73,10 +73,11 @@ $ DXVK_ASYNC=1 WINEPREFIX=/path_to_your_custom_prefix/.wine_awesome_game wine ga
 ```
 
 - Creating shell script to launch the game (optional)
-Create new file with following content and save it as `my-game-launcher.sh`
+
 ```shell
 #!/usr/bin/env sh
-cd cd ~/Games/My\ Awesome\ Game
+# Create new file and save it as `my-game-launcher.sh`
+cd ~/Games/My\ Awesome\ Game
 DXVK_ASYNC=1 WINEPREFIX=/path_to_your_custom_prefix/.wine_awesome_game wine game-name.exe
 ```
 add execute permission with `chmod +x my-game-launcher.sh`
