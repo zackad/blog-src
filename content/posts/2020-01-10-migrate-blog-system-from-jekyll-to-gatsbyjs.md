@@ -2,7 +2,7 @@
 layout: post
 title: Migrate Blog System From Jekyll To GatsbyJS
 date: 2020-01-10 10:24 +0700
-tags: blog
+tags: [blog]
 ---
 
 > **Spoiler Alert:** NO, I DON'T

@@ -3,7 +3,7 @@ layout: post
 title: self-hosted-git-server
 date: 2021-08-28 17:28 +0700
 title: How to self hosting git with http server
-tags: git self-hosted
+tags: [git, self-hosted]
 ---
 
 ## Goal

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Gulp To Automatically Run PHPUnit Test After Saving File
-tags: automation tool
+tags: [automation, tool]
 ---
 One of the most annoying as developer/programmer is to do repetitive task over and over again. Why not just automate it? We are programmer right? It's our job to solve this kind of problem.
 

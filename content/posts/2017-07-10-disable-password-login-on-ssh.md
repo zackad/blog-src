@@ -2,7 +2,7 @@
 layout: post
 author: zackad
 category: en
-tags: linux security
+tags: [linux, security]
 ---
 The purpose of this configuration is to disable ssh login using password and force user to use `ssh-key` pair instead.
 Open `/etc/ssh/sshd_config` file using text editor and change following option.

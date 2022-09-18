@@ -2,7 +2,7 @@
 layout: post
 title: How to get simple stats from git repository
 date: 2021-11-27 07:44 +0700
-tags: git script
+tags: [git, script]
 ---
 
 ## Actual script

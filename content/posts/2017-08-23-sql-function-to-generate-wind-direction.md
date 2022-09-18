@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL Function to Generate Wind Direction
-tags: sql
+tags: [sql]
 ---
 Based on [Robert Sharp][so-answer] answer on [stack overflow question][so-question], this function is tested on MySQL version 5.7.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Customizing Bash Terminal - A Backup Snippet"
 category: en
-tags: snippet
+tags: [snippet]
 ---
 ## Add Git Branch Name Into PS1
 

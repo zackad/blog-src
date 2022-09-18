@@ -2,7 +2,7 @@
 layout: post
 title: "How To Create Secure WebSocket With Node.JS \"ws\" Module"
 categoty: en
-tags: ssl tutorial websocket
+tags: [ssl, tutorial, websocket]
 ---
 In this tutorial, we will create ssl enable websocket using [ws](https://github.com/websockets/ws) module.
 

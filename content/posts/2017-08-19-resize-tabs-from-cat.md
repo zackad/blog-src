@@ -2,7 +2,7 @@
 layout: post
 title: "How To Resize Tabs Character Output from \"cat\" comand"
 category: en
-tags: tutorial snippet
+tags: [tutorial, snippet]
 ---
 This command will resize tabs size into 4 character.
 

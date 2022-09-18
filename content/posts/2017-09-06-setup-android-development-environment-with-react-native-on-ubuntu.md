@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Setup Android Development Environment With React Native on Ubuntu 16.04"
-tags: android react
+tags: [android, react]
 ---
 Getting started with android development using react-native.
 

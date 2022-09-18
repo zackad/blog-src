@@ -3,7 +3,7 @@ layout: post
 author: zackad
 title: "How To Query Previous And Next Item From SQLite Table"
 category: en
-tags: sqlite
+tags: [sqlite]
 ---
 Let say we have data like this.
 

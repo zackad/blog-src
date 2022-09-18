@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configuring Mapserver With NGINX Using Fast CGI"
-tags: linux sysadmin
+tags: [linux, sysadmin]
 ---
 Mapserver is an Open Source platform for publishing spatial data and interactive mapping application to the web. In this tutorial we will using `nginx` as reverse proxy to forward request to mapserver cgi process in the backgraound.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started With Python Websocket Client"
 category: en
-tags: python websocket
+tags: [python, websocket]
 ---
 The main purpose of this article is for archive and personal blog about what I'm doing in my work. For more info and best practice, I suggest you should visit official website of [pypi](https://pypi.python.org/pypi/websocket-client).
 
