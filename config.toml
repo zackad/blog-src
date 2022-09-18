@@ -1,3 +1,10 @@
-baseURL = 'http://example.org/'
+baseURL = ''
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+uglyurls = true
+
+[permalinks]
+    posts = '/:year/:month/:day/:slug'
+
+[frontmatter]
+    date = [':filename', ':date', ':fileModTime']
