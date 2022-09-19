@@ -8,3 +8,8 @@ uglyurls = true
 
 [frontmatter]
     date = [':filename', ':date', ':fileModTime']
+
+[outputFormats]
+    [outputFormats.RSS]
+        mediatype = "application/rss"
+        baseName = "feed"
