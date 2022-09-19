@@ -4,7 +4,7 @@ title = 'My New Hugo Site'
 uglyurls = true
 
 [permalinks]
-    posts = '/:year/:month/:day/:slug'
+    posts = '/:sections[last]/:year/:month/:day/:slug'
 
 [frontmatter]
     date = [':filename', ':date', ':fileModTime']
