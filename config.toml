@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://blog.zackad.dev'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 uglyurls = true
