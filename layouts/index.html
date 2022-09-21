@@ -1,39 +1,29 @@
-<html>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ .Title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ .Description }}">
-  <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .Site.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}/css/hc.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif] d-->
-    </head>
-	<body>
-	{{ if eq .Site.Params.enableLandingPage true}}
-	<div class="circular">
-		<img src="{{ .Site.Params.ProfilePicture }}" alt="" />
-			<div id="landing-about">
-				<a href="{{ .Site.Params.landingPageRedirectUrl }}">Find out more about <b>{{ .Site.Params.AuthorName }}</b> </a>
-		</div>
-	</div>
-	{{ else }}
-		{{ template "partials/header.html" . }}
-  <div id="article">
-      <h1>{{.Title}}</h1>
-  <ul class="posts">
-      {{ range .Site.RegularPages }}
-      <li><span><a href="{{ .RelPermalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
-      {{ end }}
-  </ul>
-	{{ template "partials/footer.html" }}
-	{{ end }}
+<html lang="{{ .Site.Language }}">
+  {{ template "partials/head.html" . }}
 
-	</body>
+  <body>
+    {{ template "partials/header.html" . }}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
+          {{ .Content }}
+          <ul class="post-list">
+            {{ range .Site.RegularPages }}
+            <li class="post-item">
+              <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+              <span class="post-meta">Written on: <strong>{{ .Date | time.Format "Mon, 2 Jan 2006 " }}</strong></span>
+              <hr />
+              <p>{{ .Summary }}</p>
+            </li>
+            {{ end }}
+          </ul>
+          <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+        </div>
+      </div>
+    </main>
+
+    {{ template "partials/footer.html" . }}
+  </body>
 </html>

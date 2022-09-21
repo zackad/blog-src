@@ -3,6 +3,20 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 uglyurls = true
 
+[menu]
+[[menu.main]]
+    identifier = 'about'
+    name = 'About Me'
+    url = '/about.html'
+[[menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags.html'
+[[menu.main]]
+    identifier = 'archive'
+    name = 'Archives'
+    url = '/posts.html'
+
 [permalinks]
     posts = '/:sections[last]/:year/:month/:day/:slug'
 
@@ -13,3 +27,12 @@ uglyurls = true
     [outputFormats.RSS]
         mediatype = "application/rss"
         baseName = "feed"
+
+[params]
+    description = "I'm a simple man. I do what I want and what I could. Otherwise it's a trial and error."
+
+    [params.social]
+        email = "zackad [dot] dev [at] gmail [dot] com"
+        github = "https://github.com/zackad"
+        twitter = "https://twitter.com/ZackadDev"
+        youtube = "https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ"

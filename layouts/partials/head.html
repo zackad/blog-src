@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}" />
+
+  {{ $sass := resources.Get "_sass/minima.scss" }} {{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+  <link rel="canonical" href="{{ .RelPermalink }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ .Title }}" href="/feed.xml" />
+  <!-- FIXME: plausible analytics -->
+  <script async defer data-domain="blog.zackad.dev" src=""></script>
+</head>

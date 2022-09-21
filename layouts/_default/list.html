@@ -1,9 +1,22 @@
-{{ template "partials/header.html" . }}
-  <div id="article">
+<!DOCTYPE html>
+<html lang="en">
+  {{ template "partials/head.html" . }}
+  <body>
+    {{ template "partials/header.html" . }}
+
+    <div id="article">
       <h1>{{.Title}}</h1>
-  <ul class="posts">
-      {{ range .Data.Pages }}
-      <li><span><a href="{{ .RelPermalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
-      {{ end }}
-  </ul>
-{{ template "partials/footer.html" . }}
+      <ul class="posts">
+        {{ range .Data.Pages }}
+        <li>
+          <span>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+          </span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ template "partials/footer.html" . }}
+  </body>
+</html>
