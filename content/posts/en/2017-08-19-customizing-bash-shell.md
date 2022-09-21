@@ -2,7 +2,7 @@
 layout: post
 title: "Customizing Bash Terminal - A Backup Snippet"
 category: en
-tags: snippet
+tags: [snippet]
 ---
 ## Add Git Branch Name Into PS1
 
@@ -16,7 +16,7 @@ export PS1="\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;34m\]\h\[\033[01;30m\]\$(par
 
 > **Preview Inside Git Repostory**
 
-> ![Inside Git Repository](https://i.imgur.com/d7ZvrK0.png)
+> ![Inside Git Repository](/assets/images/d7ZvrK0.png)
 
 ## Show Current Directory in Title Bar
 
@@ -26,7 +26,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 > **Preview Current Directory on Title Bar**
 
-> ![Outside Git Repository](https://i.imgur.com/0cbxM9w.png)
+> ![Outside Git Repository](/assets/images/0cbxM9w.png)
 
 Instead of showing full path in title bar (`PROMPT_COMMAND`), we will replace our home directory name with `~` character. First we need to get current path with variable `PWD`, then replace home directory name with `~` character.
 
@@ -45,7 +45,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: $(render_title)\007"'
 
 > **The Result**
 
-> ![Home Directory Replacement](https://i.imgur.com/ZTAnXst.png)
+> ![Home Directory Replacement](/assets/images/ZTAnXst.png)
 
 ## My Full ".bashrc" file related to PS1 and PROMPT_COMMAND
 
@@ -93,7 +93,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$(render_title)\007"'
 ```
 ### Final result
 
-> ![Final result](https://i.imgur.com/slLSjCG.png)
+> ![Final result](/assets/images/slLSjCG.png)
 
 ### Reference
 

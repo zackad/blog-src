@@ -2,7 +2,7 @@
 layout: post
 title: How To Run Windows Game with Vanilla Wine on Linux
 date: 2022-05-15 10:06 +0700
-tags: linux gaming vanilla wine compatibility tweak
+tags: [linux, gaming, vanilla, wine, compatibility, tweak]
 ---
 
 ## What

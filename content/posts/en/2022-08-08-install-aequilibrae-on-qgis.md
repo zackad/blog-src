@@ -2,7 +2,7 @@
 layout: post
 title: Installing Aequilibrae plugin on QGIS linux
 date: 2022-08-08 14:33 +0700
-tags: troubleshoot
+tags: [troubleshoot]
 ---
 
 ## Problem

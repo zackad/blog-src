@@ -2,7 +2,7 @@
 layout: post
 title: "NodeJS Permission Denied When Installing \"sqlite3\" Module"
 category: en
-tags: nodejs troubleshooting
+tags: [nodejs, troubleshooting]
 ---
 I'm trying to create a nodejs app using sqlite as database storage. The problem is I got error message that looks like this
 

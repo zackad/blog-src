@@ -2,7 +2,7 @@
 layout: post
 title: Fixing Slow Boot After Turning Off Swap on Linux
 date: 2022-04-23 06:06 +0700
-tags: linux
+tags: [linux]
 ---
 
 ## Why Turning-off swap?

@@ -2,7 +2,7 @@
 layout: post
 title: Reset USB Connection Without Un-pluging on Linux
 date: 2022-05-16 17:26 +0700
-tags: linux troubleshooting
+tags: [linux, troubleshooting]
 ---
 
 I've been playing games on linux lately. Unfortunately most of them is windows game that I run using steam proton or wine. None of them has native support for linux and has some problem either when launching or terminating. In most cases I'm using either SIGKILL or SIGTERM to stop the process. Because of this ungracefull process ternimation my wireless xbox controller going _caput_ and refuse to re-connect. The solution is easy, just unplug and re-plug the usb wireless receiver.

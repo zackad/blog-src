@@ -2,7 +2,7 @@
 layout: post
 title: Re-Installing TerraMaster OS (TOS) After It Broke
 date: 2021-12-06 11:13 +0700
-tags: linux server
+tags: [linux, server]
 ---
 
 ## Why?

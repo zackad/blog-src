@@ -2,7 +2,7 @@
 layout: post
 title: Configuring Beelink SER3 to Auto Start on Power Loss
 date: 2022-09-16 11:55 +0700
-tags: bios
+tags: [bios]
 ---
 
 1. Power ON your mini-pc and press `F7` key on your keyboard until you enter BIOS mode.

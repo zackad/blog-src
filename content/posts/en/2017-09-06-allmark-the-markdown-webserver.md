@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How To Install Allmark - The Markdown Webserver"
-tags: markdown-server
+tags: [markdown-server]
 ---
 allmark is a fast, standalone markdown web server for Linux, Mac OS and Windows written in go.
 

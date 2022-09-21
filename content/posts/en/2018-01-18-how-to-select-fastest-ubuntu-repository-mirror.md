@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Select Fastest Ubuntu Repository Mirror
-tags: ubuntu mirror
+tags: [ubuntu, mirror]
 ---
 Ubuntu has so many mirror repository we can choose. Sometimes the mirror exists in our country that near with our internet provider.
 

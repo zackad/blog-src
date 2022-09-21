@@ -2,7 +2,7 @@
 layout: post
 title: "How To Add PPA Repository Manually Without \"add-apt-repository\" On Ubuntu"
 category: en
-tags: ubuntu
+tags: [ubuntu]
 ---
 The easiest way to adding ppa (Personal Package Archive) into ubuntu (and it's variant) repository is to use `add-apt-repository`. Unfortunately this tool sometime is not installed in the system especially on minimalist distribution such as docker image. The good news is, we can add it manually.
 
@@ -10,11 +10,11 @@ The easiest way to adding ppa (Personal Package Archive) into ubuntu (and it's v
 
 Visit [ppa](https://launchpad.net/ubuntu/+ppas) to search witch ppa we want to add to our system. Use the search menu to find the ppa we want.
 
-![Search PPA](https://i.imgur.com/cCFLZXT.png)
+![Search PPA](/assets/images/cCFLZXT.png)
 
 Open the page and click **Technical details about this PPA** to show ppa url and gpg key.
 
-![Technical details PPA](https://i.imgur.com/JX7s40K.png)
+![Technical details PPA](/assets/images/JX7s40K.png)
 
 Open file */etc/apt/source.list* and add the url we get from ppa page to the bottom of the file. in this example
 

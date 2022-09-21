@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Setup Android Development Environment With React Native on Ubuntu 16.04"
-tags: android react
+tags: [android, react]
 ---
 Getting started with android development using react-native.
 
@@ -108,7 +108,7 @@ android
 
 This will open a new window. From here we can select what package to be installed.
 
-![SDK Manager](https://i.imgur.com/a5kN8gy.png)
+![SDK Manager](/assets/images/a5kN8gy.png)
 
 Please make sure that following tool is checked before we click *Install Package*
 

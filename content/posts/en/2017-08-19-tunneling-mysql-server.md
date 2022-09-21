@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How To Tunneling MySQL Server"
-tags: ssh
+tags: [ssh]
 ---
 For security reason, usually (and it should) root access won't be allowed from remote address. So how do we can access mysql server using root credential from remote address? The usual way is, we access our remote server via ssh then access mysql from command line (shell).
 
