@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="home">
+  <ul class="post-list">
+    <!-- Iterate over regular post -->
+    {{ range .Site.RegularPages }}
+    <!-- List posts type only -->
+    {{ if eq .Type "posts" }}
+    <li class="post-item">
+      <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ template "partials/post_meta.html" . }}
+      <hr />
+      <p>{{ .Summary }}</p>
+    </li>
+    {{ end }}
+    <!-- End of posts type filter -->
+    {{ end }}
+    <!-- End of regular pages iteration -->
+  </ul>
+  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+</div>
+{{ end }}
