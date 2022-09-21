@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div id="article">
+  <ul class="archive-list">
+    <li class="year">
+      {{if and (eq .Section "tags" ) (eq .Kind "term")}}
+      <span>Tags:</span>
+      {{end}}
+      <span>{{.Title}}</span>
+    </li>
+
+    <!-- Iterate collection-->
+    {{ range .Data.Pages }}
+    <li class="archive-item">
+      <small class="post-meta" style="font-family: monospace">{{.Date | time.Format "2006-Jan-02" }}</small>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
