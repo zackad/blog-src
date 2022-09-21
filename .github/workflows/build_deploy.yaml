@@ -7,16 +7,17 @@ jobs:
         runs-on: ubuntu-20.04
         steps:
             - uses: actions/checkout@v2
-            - uses: ruby/setup-ruby@v1
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v2
               with:
-                  ruby-version: 2.6
-                  bundler-cache: true
-            - name: Build with jekyll
-              run: JEKYLL_ENV=production bundle exec jekyll build
+                hugo-version: '0.103.0'
+                extended: true
+            - name: Build
+              run: hugo --minify
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v1.1
               with:
-                  publish-dir: _site
+                  publish-dir: public
                   production-branch: master
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   deploy-message: 'Deploy from GitHub Actions'
