@@ -30,7 +30,7 @@ uglyurls = true
 
 [params]
     description = "I'm a simple man. I do what I want and what I could. Otherwise it's a trial and error."
-    disqusShortname = 'zackadtect'
+    disqusShortname = 'zackadtech'
 
     [params.social]
         email = "zackad [dot] dev [at] gmail [dot] com"
