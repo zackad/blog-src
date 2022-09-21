@@ -16,12 +16,7 @@
             {{ if eq .Type "posts" }}
             <li class="post-item">
               <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-              {{ if gt .Date .Lastmod }}
-              <span class="post-meta">Written on: <strong>{{ .Date | time.Format "Mon, 2 Jan 2006 " }}</strong></span>
-              {{ else }}
-              <span class="post-meta">Update on: <strong>{{ .Lastmod | time.Format "Mon, 2 Jan 2006 " }}</strong></span>
-              {{ end }}
-              <span class="post-meta">by zackad</span>
+              {{ template "partials/post_meta.html" . }}
               <hr />
               <p>{{ .Summary }}</p>
             </li>
