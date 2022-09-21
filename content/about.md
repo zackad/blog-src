@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About Me
-permalink: /about/
 ---
 I'm a web developer that goes with *zackad* as nickname in most of my activities on the internet. My skill consist of those what needed to become of fullstack web developer, e.g:
 
@@ -25,7 +24,7 @@ I'm a web developer that goes with *zackad* as nickname in most of my activities
     - OGR
     - PostGIS
 
-Content generated using [jekyll][jekyll] with [minima][minima] theme.
+Originally created with [jekyll][jekyll] using [minima][minima] theme, converted to [hugo](https://gohugo.io/) site.
 
 [jekyll]:https://github.com/jekyll/jekyll
 [minima]:https://github.com/jekyll/minima

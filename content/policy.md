@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-permalink: /policy.html
+url: /policy.html
 ---
 
 ## Cookie Policy
