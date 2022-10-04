@@ -5,7 +5,7 @@ date: 2022-09-16 11:55 +0700
 tags: [bios]
 ---
 
-1. Power ON your mini-pc and press `F7` key on your keyboard until you enter BIOS mode.
+1. Power ON your mini-pc and press `Del` key on your keyboard until you enter BIOS mode.
 2. Navigate to Advanced tab
 3. Select AMD CBS menu
    ![advance option](/assets/images/1_advance_option.jpg)
