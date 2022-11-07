@@ -35,7 +35,7 @@ $ git merge origin/master --ff
 
 ## Step 3 - Compiling
 ```shell
-$ PHP_BUILD_CONFIGURE_OPTS="--with-pgsql --with-pdo-pgsql --with-zip --with-json --with-xml --enable-fpm" \
+$ PHP_BUILD_CONFIGURE_OPTS="--with-sodium --with-pgsql --with-pdo-pgsql --with-zip --with-json --with-xml --enable-fpm" \
     PHP_BUILD_XDEBUG_ENABLE=off \
     PHP_BUILD_INSTALL_EXTENSION="apcu=5.1.22 pcov=1.0.11" \
     phpenv install 8.1.12
