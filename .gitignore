@@ -3,3 +3,8 @@
 /resources
 
 /assets/styles/tailwind.css
+
+# Devenv
+.devenv*
+.direnv
+devenv.local.nix
