@@ -5,14 +5,14 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ 
-    pkgs.bun
-    pkgs.hugo
-    pkgs.nodejs-18_x
+  packages = with pkgs; [
+    hugo
+    nodejs-slim
+    yarn
   ];
 
   # https://devenv.sh/scripts/
-  scripts.build.exec = "bun run build";
+  scripts.build.exec = "yarn run build";
 
   enterShell = ''
   '';
@@ -24,7 +24,7 @@
   # pre-commit.hooks.shellcheck.enable = true;
 
   # https://devenv.sh/processes/
-  processes.serve.exec = "bun run dev";
+  processes.serve.exec = "yarn run dev";
 
   # See full reference at https://devenv.sh/reference/options/
 }

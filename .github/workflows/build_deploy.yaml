@@ -4,20 +4,23 @@ on: [push, pull_request]
 
 jobs:
     build_and_deploy:
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v2
               with:
-                hugo-version: 'latest'
-                extended: true
-            - name: Setup Bun Runtime
-              uses: antongolub/action-setup-bun@v1
+                  hugo-version: 'latest'
+                  extended: true
+            - name: Setup NodeJS Runtime
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
             - name: Install dependencies
-              run: bun install
+              run: yarn install
             - name: Build the site
-              run: bun run build
+              run: yarn run build
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v1.1
               with:
