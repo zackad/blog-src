@@ -9,9 +9,9 @@
   {{ $options := (dict "outputStyle" "compressed") }}
   {{ $sass := resources.Get "_sass/minima.scss" }}
   {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
 
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
   <link rel="canonical" href="{{ .RelPermalink }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ .Title }}" href="/feed.xml" />
-  <script async defer data-domain="blog.zackad.dev" src="https://analytics.zackad.dev/js/plausible.js"></script>
+  <script async defer data-domain="zackad.dev" src="https://analytics.zackad.dev/js/plausible.js"></script>
 </head>
