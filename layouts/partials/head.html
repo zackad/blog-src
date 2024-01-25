@@ -5,6 +5,7 @@
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Site.Params.description }}" />
 
+  <!-- prettier-ignore -->
   {{ $options := (dict "outputStyle" "compressed") }}
   {{ $sass := resources.Get "_sass/minima.scss" }}
   {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint }}
