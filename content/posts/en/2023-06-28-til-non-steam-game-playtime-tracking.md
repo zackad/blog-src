@@ -1,8 +1,18 @@
 ---
 title: 'TIL: You Can Track Playing Time of Non-Steam Game'
-date: 2023-06-28T07:29:36+07:00
+date: 2024-01-28T08:03:25+07:00
 tags: [gaming]
 ---
+
+> Update: 2024-01-28
+>
+> This trick NO longer work
+
+If you want to track your gaming session (and other application usage) on windows, give [ProcrastiTracker](https://strlen.com/procrastitracker/) a try. In linux I recommend [Lutris](https://lutris.net/).
+
+---
+
+__Original Article__
 
 If you have _non-steam game_[0] added to steam launcher, one feature that missing is ability to track playtime. It turn out that you can simply move your non-steam game into steam library folder and it will recognize the game and add playtime tracking just fine.
 
