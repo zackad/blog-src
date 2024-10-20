@@ -1,17 +1,19 @@
 ---
 layout: post
 title: self-hosted-git-server
-date: 2021-08-28 17:28 +0700
+date: 2021-08-28T17:28:00+0700
 title: How to self hosting git with http server
 tags: [git, self-hosted]
 ---
 
 ## Goal
+
 - Can list git repository similar to `http://git.php.net`
 - Web insterface used only for public view, security is not a concern
 - Easy to provision and tear down
 
 ## TL;DR
+
 - Create directory where to store your repositories
 - Run `docker run -p 1234:1234 -v /your/repo:/srv/gitweb/repo zackad/gitweb -d`
 
@@ -82,4 +84,5 @@ $feature{'remote_heads'}{'default'} = [1];
 - Now you can add your projects into `/your/repo/path/` and it will be automatically updated in web interface
 
 ## Further Action
+
 You can add this container into your server with some reverse proxy to add SSL for secure access. My main purpose of this system if for mirroring and peace of mind knowing that I can host all my project in an environment where I have total control.

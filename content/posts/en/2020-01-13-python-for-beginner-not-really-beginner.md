@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python For Beginner (Not Really Beginner!)
-date: 2020-01-13 21:29 +0700
+date: 2020-01-13T21:29:00+0700
 tags: [guide]
 ---
 

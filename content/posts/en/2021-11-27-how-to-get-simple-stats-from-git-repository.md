@@ -1,11 +1,12 @@
 ---
 layout: post
 title: How to get simple stats from git repository
-date: 2021-11-27 07:44 +0700
+date: 2021-11-27T07:44:00+0700
 tags: [git, script]
 ---
 
 ## Actual script
+
 This script will print commit stats grouped by author in the current git repository. Save into your `PATH` e.g `~/.local/bin/gstats` and give it execute permission (`chmod +x ~/.local/bin/gstats`).
 
 ```shell
@@ -13,7 +14,7 @@ This script will print commit stats grouped by author in the current git reposit
 echo "Generating simple stats for this repository"
 
 for author in $(git shortlog -s | cut -c8- | xargs)
-do 
+do
     echo -e "\nStats for \"$author\""
 
     # Copied from: https://gist.github.com/eyecatchup/3fb7ef0c0cbdb72412fc
@@ -26,6 +27,7 @@ done
 ## Usage
 
 Navigate into your git repository and type `gstats` command, this will output something like this.
+
 ```text
 Generating simple stats for this repository
 

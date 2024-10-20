@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring Beelink SER3 to Auto Start on Power Loss
-date: 2022-09-16 11:55 +0700
+date: 2022-09-16T11:55:00+0700
 tags: [bios]
 ---
 

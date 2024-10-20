@@ -1,17 +1,20 @@
 ---
 layout: post
 title: How To Run Windows Game with Vanilla Wine on Linux
-date: 2022-05-15 10:06 +0700
+date: 2022-05-15T10:06:00+0700
 tags: [linux, gaming, vanilla, wine, compatibility, tweak]
 ---
 
 ## What
+
 Gaming on linux getting better and better in the last couple of years thanks to Steam and project like proton. This is my take on how to play windows game that doesn't available on steam or some pirated version to try before buying. Ideally I would use proton to run windows game/application but I can't make it work. Proton/steam always complaint about execute permission on mounted disk. I store most of my data on NAS server mounted with samba or NFS. Whatever tweak I use, steam wont recognize it as valid mount. I can't even use my mounted NAS as steam library folder. This force me to 'sacrifice' litle space on my local drive to be used as steam library folder. Fortunately by using `wine` I can run whatever application/game stored in whatever directory/network mounted share.
 
 ## Why not use Lutris/PlayOnLinux/Others?
+
 I have steam installed on my system and don't want to add another application just to launch game/app. All I need is some mechanism to launch windows game/application and add it to steam for centralize game launcher.
 
 ## Step by Step
+
 - Install latest version of `wine` using your package manager
 - Make sure you can run wine from your terminal
 
@@ -80,6 +83,7 @@ $ DXVK_ASYNC=1 WINEPREFIX=/path_to_your_custom_prefix/.wine_awesome_game wine ga
 cd ~/Games/My\ Awesome\ Game
 DXVK_ASYNC=1 WINEPREFIX=/path_to_your_custom_prefix/.wine_awesome_game wine game-name.exe
 ```
+
 add execute permission with `chmod +x my-game-launcher.sh`
 
 - Now we can call the launcher from terminal or add it into steam as 'Non-Steam game'. Open terminal and run `/path_to/my-game-launcher.sh` to run the launcher.
