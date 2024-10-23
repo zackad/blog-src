@@ -8,7 +8,7 @@
   <!-- prettier-ignore -->
   {{ $options := (dict "outputStyle" "compressed") }}
   {{ $sass := resources.Get "_sass/minima.scss" }}
-  {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint }}
+  {{ $style := $sass | css.Sass $options | resources.Fingerprint }}
 
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
   <link rel="canonical" href="{{ .RelPermalink }}" />
