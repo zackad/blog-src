@@ -6,6 +6,5 @@
 /assets/styles/tailwind.css
 
 # Devenv
-.devenv*
+.devenv
 .direnv
-devenv.local.nix
