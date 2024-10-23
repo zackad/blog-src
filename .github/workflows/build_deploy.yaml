@@ -1,4 +1,4 @@
-name: Build and Deploy to Netlify
+name: Build and Deploy
 
 on: [push, pull_request]
 
@@ -21,17 +21,13 @@ jobs:
               run: yarn install
             - name: Build the site
               run: yarn run build
-            - name: Deploy to Netlify
-              uses: nwtgck/actions-netlify@v1.1
+            - name: Deploy to Server
+              uses: easingthemes/ssh-deploy@main
+              if: github.ref == 'refs/heads/master'
               with:
-                  publish-dir: public
-                  production-branch: master
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  deploy-message: 'Deploy from GitHub Actions'
-                  enable-pull-request-comment: true
-                  enable-commit-comment: false
-                  overwrites-pull-request-comment: true
-              env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-              timeout-minutes: 1
+                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+                  ARGS: "-azP --delete-after"
+                  SOURCE: "public/"
+                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                  REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                  TARGET: ${{ secrets.REMOTE_TARGET }}
