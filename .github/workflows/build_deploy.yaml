@@ -8,9 +8,9 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v2
+              uses: peaceiris/actions-hugo@v3
               with:
-                  hugo-version: 'latest'
+                  hugo-version: '0.135.0'
                   extended: true
             - name: Setup NodeJS Runtime
               uses: actions/setup-node@v4
