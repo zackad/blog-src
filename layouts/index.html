@@ -9,7 +9,7 @@
       <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       {{ template "partials/post_meta.html" . }}
       <hr />
-      <p>{{ .Summary }}</p>
+      <p>{{ .Summary | plainify }}</p>
     </li>
     {{ end }}
     <!-- End of posts type filter -->
