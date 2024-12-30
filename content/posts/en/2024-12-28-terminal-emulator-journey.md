@@ -1,6 +1,7 @@
 ---
 title: "My Terminal Emulator Journey"
 date: 2024-12-28T08:41:07+07:00
+lastmod: 2024-12-30T08:46:50+07:00
 ---
 
 Over the years, I use different terminal emulator. Each has their own pros and cons. This is a summary of my experience.
