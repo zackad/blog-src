@@ -27,7 +27,10 @@ Xfce if my desktop environment of choice when I migrate to manjaro linux after u
 The default terminal for steamdeck since it use KDE plasma. Don't really like the visual aspect of this terminal. Configuration via gui (I don't like it), can't get rid of some toolbar/menu. This might be my least favorite terminal I've used.
 
 ## WezTerm
-My current terminal on steamdeck
+My current terminal on steamdeck. Still exploring.
 
 ## Windows Terminal
 This might be my favorite terminal in term of appearance. Unfortunately it on windows, something that I abandon not long ago.
+
+## Ghostty
+Still waiting to be available on nixpkgs or flatpak.
