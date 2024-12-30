@@ -7,7 +7,7 @@ tags: [linux, sysadmin]
 ## Problems
 This are the problem I encounter when self-hosting application in docker:
 - I store my data/media in a NAS which is different machine from the server that run docker. I use samba as protocol of choice since it simplify my setup on multiple device (smartphone, tablet, laptop, desktop). I don't use NFS since it doesn't have authentication protection.
-- When my server boot up after power loss, the NAS will be ready AFTER main server when the docker run. This means mounting network share will fail on boot.
+- When my server boot up after power loss, the NAS will be ready AFTER main server where the docker run. This means mounting network share will fail on boot.
 - Docker container that rely on network share filesystem will not start properly.
 - AFAIK docker cannot auto restart container that failed to start to begin with.
 
