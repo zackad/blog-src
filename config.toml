@@ -43,6 +43,12 @@ rssLimit = 30
     unsafe = true
 
 [build]
-  [[build.cachebusters]]
-    source = 'layouts/.*'
-    target = 'css'
+    [[build.cachebusters]]
+        source = 'layouts/.*'
+        target = 'css'
+
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'
+
