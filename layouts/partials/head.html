@@ -11,6 +11,17 @@
   {{ $style := $sass | css.Sass $options | resources.Fingerprint }}
 
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+  <!-- TailwindCSS -->
+  {{ with resources.Get "styles/tailwind.css" }}
+    {{ $opts := dict "minify" true }}
+    {{ with . | css.TailwindCSS $opts }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
   <link rel="canonical" href="{{ .RelPermalink }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ .Title }}" href="/feed.xml" />
   <script async defer data-domain="zackad.dev" src="https://analytics.zackad.dev/js/plausible.js"></script>

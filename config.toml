@@ -41,3 +41,8 @@ rssLimit = 30
 
 [markup.goldmark.renderer]
     unsafe = true
+
+[build]
+  [[build.cachebusters]]
+    source = 'layouts/.*'
+    target = 'css'

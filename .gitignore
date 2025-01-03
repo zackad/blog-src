@@ -5,7 +5,6 @@
 
 .DS_Store
 .hugo_build.lock
-/assets/styles/tailwind.css
 
 # Devenv
 .devenv
