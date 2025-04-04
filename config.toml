@@ -5,50 +5,52 @@ uglyurls = true
 rssLimit = 30
 
 [menu]
+
 [[menu.main]]
-    identifier = 'about'
-    name = 'About Me'
-    url = '/about.html'
+identifier = 'about'
+name = 'About Me'
+url = '/about.html'
+
 [[menu.main]]
-    identifier = 'tags'
-    name = 'Tags'
-    url = '/tags.html'
+identifier = 'tags'
+name = 'Tags'
+url = '/tags.html'
+
 [[menu.main]]
-    identifier = 'archive'
-    name = 'Archives'
-    url = '/posts.html'
+identifier = 'archive'
+name = 'Archives'
+url = '/posts.html'
 
 [permalinks]
-    posts = '/:sections[last]/:year/:month/:day/:slug'
+posts = '/:sections[last]/:year/:month/:day/:slug'
 
 [frontmatter]
-    date = [':filename', ':date', ':fileModTime']
+date = [':filename', ':date', ':fileModTime']
 
 [outputFormats]
-    [outputFormats.RSS]
-        mediatype = "application/rss"
-        baseName = "feed"
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "feed"
 
 [params]
-    description = "I'm a simple man. I do what I want and what I could. Otherwise it's a trial and error."
-    disqusShortname = 'zackadtech'
+description = "I'm a simple man. I do what I want and what I could. Otherwise it's a trial and error."
+disqusShortname = 'zackadtech'
 
-    [params.social]
-        email = "zackad [dot] dev [at] gmail [dot] com"
-        github = "https://github.com/zackad"
-        twitter = "https://twitter.com/ZackadDev"
-        youtube = "https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ"
+[params.social]
+email = "zackad [dot] dev [at] gmail [dot] com"
+github = "https://github.com/zackad"
+twitter = "https://twitter.com/ZackadDev"
+youtube = "https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ"
 
 [markup.goldmark.renderer]
-    unsafe = true
+unsafe = true
 
 [build]
-    [[build.cachebusters]]
-        source = 'layouts/.*'
-        target = 'css'
+[[build.cachebusters]]
+source = 'layouts/.*'
+target = 'css'
 
 [pagination]
-  disableAliases = false
-  pagerSize = 10
-  path = 'page'
-
+disableAliases = false
+pagerSize = 10
+path = 'page'
