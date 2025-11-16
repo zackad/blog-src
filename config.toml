@@ -38,7 +38,6 @@ description = "I'm a simple man. I do what I want and what I could. Otherwise it
 [params.social]
 email = "zackad [dot] dev [at] gmail [dot] com"
 github = "https://github.com/zackad"
-twitter = "https://twitter.com/ZackadDev"
 youtube = "https://www.youtube.com/channel/UCao_VdbgaSy2CnB0VdySOEQ"
 
 [markup.goldmark.renderer]
